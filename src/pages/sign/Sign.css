@@ -1,0 +1,239 @@
+.sign-page main .container {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+
+.sign-page main .container .sign-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-page main .container .sign-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.sign-page main .container .sign-form form>* {
+    margin-bottom: 12px;
+
+}
+
+.sign-page main .container .sign-form form .error-message {
+    color: var(--red-col);
+    /* #FF5722 #388E3C #673AB7 */
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 350px;
+}
+
+@media (min-width:992px) {
+    .sign-page main .container {
+        grid-template-columns: 45% 55%;
+    }
+}
+
+@media (min-width:1200px) {
+    .sign-page main .container {
+        grid-template-columns: 40% 60%;
+    }
+}
+
+
+.sign-page main .container .sign-form form h1 {
+    font-size: 38px;
+    font-weight: 500;
+    color: var(--black-col);
+    text-align: center;
+}
+
+.sign-page main .container .sign-form form .sub-title {
+    color: var(--main-txt-col);
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+}
+
+.sign-page main .container .sign-form form .sep-box {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sign-page main .container .sign-form form .sep-box hr {
+    width: calc((100% - 40px) / 2);
+    background-color: var(--main-txt-col);
+}
+
+.sign-page main .container .sign-form form .sep-box span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    width: 40px;
+    height: 25px;
+    color: var(--black-col);
+}
+
+.sign-page main .container .sign-form form .sign-with-btn {
+    height: 42px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--secondary-txt-col);
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-page main .container .sign-form form .sign-with-btn img {
+    height: 26px;
+    margin-right: 10px;
+}
+
+.sign-page main .container .sign-form form .sign-with-btn span {
+    color: var(--main-txt-col);
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.sign-page main .container .sign-form form input:not([type="file"]) {
+    padding-left: 15px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--secondary-txt-col);
+    color: var(--main-txt-col);
+
+}
+
+.sign-page main .container .sign-form form .image-box {
+    height: 40px;
+    border-radius: 5px;
+    color: var(--main-txt-col);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sign-page main .container .sign-form form .image-box input[type="file"] {
+    position: absolute;
+    left: -40%;
+    top: 5%;
+    opacity: 0;
+    cursor: pointer;
+    width: 140%;
+    height: 100%;
+}
+
+.sign-page main .container .sign-form form .image-box .image-btn {
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    width: 115px;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    letter-spacing: 0.7px;
+    color: var(--white-col);
+    background-color: var(--blue-col);
+    box-shadow: 0 0 2px var(--blue-col);
+
+}
+
+.sign-page main .container .sign-form form .image-box .image-txt {
+    margin-left: 7px;
+    text-transform: capitalize;
+    color: var(--secondary-txt-col);
+    font-size: 16px;
+    /*  */
+}
+
+.sign-page main .container .sign-form form input:focus {
+    border-color: var(--blue-col);
+    background-color: var(--white-blue-col);
+}
+
+.sign-page main .container .sign-form form .forget-password-btn {
+    color: var(--black-col);
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.sign-page main .container .sign-form form .sign-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    border-radius: 5px;
+    border: none;
+    color: var(--white-col);
+    font-size: 22px;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+    background-color: var(--black-col);
+}
+
+.sign-page main .container .sign-form form .terms-box {
+    height: 40px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+
+.sign-page main .container .sign-form form .terms-box .icon {
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+    color: var(--blue-col);
+    cursor: pointer;
+}
+
+.sign-page main .container .sign-form form .terms-box .terms {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-page main .container .sign-form form .log-box {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+.sign-page main .container .sign-form form .log-box .change-path {
+    text-decoration: none;
+    color: var(--blue-col);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.sign-page main .container .sign-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:991px) {
+    .sign-page main .container .sign-data {
+        display: none;
+    }
+}

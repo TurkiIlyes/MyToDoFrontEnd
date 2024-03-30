@@ -1,0 +1,175 @@
+.tasks-swiper {
+    width: 100%;
+    height: 230px;
+    z-index: 2;
+    /* background-color: var(--white-blue-col); */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 0 5px var(--white-blue-col); */
+    /* padding: 0 50px; */
+
+
+}
+
+.tasks-swiper .task-slide {
+    width: 240px !important;
+    height: 77% !important;
+    overflow: hidden;
+    background-color: var(--white-col);
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--aqua-col);
+    margin: 23px 10px;
+}
+
+.tasks-swiper .task-slide .link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tasks-swiper .task-slide .img-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--aqua-col);
+    width: 100%;
+    height: 67%;
+    border-bottom-left-radius: 40px;
+    padding: 5px;
+
+}
+
+.tasks-swiper .task-slide .img-box::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    bottom: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--aqua-col);
+    z-index: 1;
+}
+
+.tasks-swiper .task-slide .img-box .task-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0 40px;
+    border: 2px solid var(--dark-col);
+}
+
+.tasks-swiper .task-slide .task-status {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    padding: 3px 5px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: var(--red-col);
+    color: var(--white-col);
+    z-index: 1;
+    box-shadow: 0 0 5px var(--red-col);
+}
+
+.tasks-swiper .task-slide .menu-box {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--white-col);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    border-radius: 50%;
+    box-shadow: 0 0 3px var(--white-col);
+    border: none;
+    cursor: pointer;
+}
+
+.tasks-swiper .task-slide .menu-box .icon {
+    color: var(--red-col);
+    font-size: 20px;
+
+}
+
+
+
+
+.tasks-swiper .task-slide .task-menu {
+    position: absolute;
+    right: 0;
+    top: 140%;
+    width: 140px;
+    padding: 5px;
+    background-color: var(--red-col);
+    border-radius: 7px;
+    border-width: 0 2px 2px;
+    outline-width: 0 2px 2px;
+
+}
+
+.tasks-swiper .task-slide .task-menu::after {
+    content: "";
+    position: absolute;
+    top: -22%;
+    right: 4px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--red-col) transparent;
+}
+
+.tasks-swiper .task-slide .task-menu .btn {
+    cursor: pointer;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    margin: 2px 0;
+    background-color: var(--white-col);
+    color: var(--dark-col);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+
+}
+
+
+
+
+
+
+
+
+.tasks-swiper .task-slide .task-data {
+    position: relative;
+    height: 33%;
+    width: 100%;
+    background-color: var(--white-col);
+    display: flex;
+    align-items: center;
+}
+
+.tasks-swiper .task-slide .task-data::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--white-col);
+    border-top-right-radius: 40px;
+    z-index: 1;
+
+}
+
+.tasks-swiper .task-slide .task-data .task-title {
+    color: var(--dark-col);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-left: 20px;
+}

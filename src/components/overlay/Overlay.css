@@ -1,0 +1,417 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.overlay .overlay-box {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--overlay);
+    width: 100%;
+    height: 100%;
+}
+
+.overlay form {
+    top: 90px;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 410px;
+    padding: 25px;
+    padding-bottom: 15px;
+    background-color: var(--white-col);
+}
+
+.overlay form .close-box {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+.overlay form .close-box .icon {
+    color: var(--red-col);
+    font-size: 30px;
+}
+
+.overlay form>* {
+    margin-bottom: 12px;
+
+}
+
+.overlay form .error-message {
+    color: var(--red-col);
+    /* #FF5722 #388E3C #673AB7 */
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 350px;
+}
+
+.overlay form h1 {
+    font-size: 38px;
+    font-weight: 500;
+    color: var(--blue-col);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.overlay form .sub-title {
+    color: var(--main-txt-col);
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    line-height: 1.6;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.overlay form label {
+    margin-top: 10px;
+    text-transform: capitalize;
+    color: var(--dark-col);
+    font-weight: 500;
+}
+
+.overlay form input:not([type="file"]) {
+    padding: 0 15px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--grey-col);
+    color: var(--main-txt-col);
+    font-size: 14px;
+    letter-spacing: 1.6px;
+
+}
+
+.overlay form input:read-only {
+    background-color: var(--grey-col);
+}
+
+.overlay form .task-details {
+    padding: 10px;
+    padding-left: 15px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50px;
+    max-height: 140px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    line-height: 1.6;
+    border: 1px solid var(--secondary-txt-col);
+    color: var(--main-txt-col);
+}
+
+
+.overlay form input:focus,
+.overlay form .task-details:focus {
+    border-color: var(--blue-col);
+    background-color: var(--white-blue-col);
+}
+
+.overlay form .image-box {
+    margin-top: 5px;
+    background-color: transparent;
+    height: 140px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px dashed var(--aqua-col);
+}
+
+.overlay form .image-box input[type="file"] {
+    position: absolute;
+    left: -40%;
+    top: 5%;
+    opacity: 0;
+    cursor: pointer;
+    width: 140%;
+    height: 100%;
+}
+
+.overlay form .image-box .icon {
+    font-size: 26px;
+    color: var(--blue-col);
+
+}
+
+.overlay form .image-box .image-txt {
+    margin-left: 7px;
+    text-transform: capitalize;
+    color: var(--blue-col);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.overlay form .send-email-box {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.overlay form .send-email-box .send-email-txt {
+    font-size: 18px;
+    text-transform: capitalize;
+    color: var(--grey-col);
+}
+
+.overlay form .send-email-box .icon {
+    margin-left: 15px;
+    font-size: 26px;
+    color: var(--blue-col);
+    border-radius: 50%;
+}
+
+.overlay form .form-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    border-radius: 5px;
+    border: none;
+    color: var(--white-col);
+    font-size: 22px;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+    background-color: var(--black-col);
+    margin-top: 15px;
+}
+
+.overlay form .form-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+
+.overlay form .form-btns .btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 38%;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+}
+
+.overlay form .form-btns .btn:first-of-type {
+    background-color: var(--blue-col);
+    color: var(--white-col);
+}
+
+.overlay form .form-btns .btn:last-of-type {
+    background-color: transparent;
+    color: var(--blue-col);
+}
+
+
+.overlay form .form-btns .btn:last-of-type span {
+    margin-left: 5px;
+}
+
+
+
+
+.overlay form .form-btns .btn.wrn-btn {
+    background-color: var(--red-col);
+    color: var(--white-col);
+}
+
+.overlay form .wrn-message,
+.overlay form .form-btns .btn.wrn-message {
+    color: var(--red-col);
+}
+
+
+.overlay form .details {
+    margin: 15px 0;
+    color: var(--main-txt-col);
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    line-height: 1.6;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+.overlay form .show-date-box {
+    padding: 0 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.overlay form .show-date-box .title {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+    text-transform: capitalize;
+    color: var(--dark-col);
+}
+
+.overlay form .show-date-box .time {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: var(--aqua-col);
+    color: var(--white-col);
+    padding: 5px 12px;
+    border-radius: 7px;
+    margin-left: 10px;
+    box-shadow: 0 0 5px var(--aqua-col);
+}
+
+
+
+
+
+.overlay form .show-time-box {
+    padding: 0 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: space-between;
+}
+
+.overlay form .show-time-box .sep {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+    text-transform: capitalize;
+    color: var(--dark-col);
+
+}
+
+.overlay form .show-time-box .time {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: var(--red-col);
+    color: var(--white-col);
+    padding: 4px 10px;
+    border-radius: 7px;
+    box-shadow: 0 0 5px var(--red-col);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.overlay form .show-image-box {
+    margin-top: 5px;
+    background-color: transparent;
+    height: 140px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* border: 2px dashed var(--white-col); */
+    background-color: var(--aqua-col);
+    box-shadow: 0 0 5px var(--aqua-col);
+}
+
+.overlay form .show-image-box .img {
+    width: 70%;
+    height: 100%;
+}
+
+
+.overlay form .show-status-box {
+    padding: 0 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.overlay form .show-status-box .title {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+    text-transform: capitalize;
+    color: var(--dark-col);
+
+}
+
+.overlay form .show-status-box .status {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: var(--red-col);
+    color: var(--white-col);
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-left: 10px;
+    box-shadow: 0 0 5px var(--red-col);
+
+}
+
+
+
+
+.overlay form .select-status-box {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.overlay form .select-status-box span {
+    text-transform: capitalize;
+    color: var(--dark-col);
+    font-weight: 500;
+}
+
+.overlay form .select-status-box .status {
+    padding: 7px 10px;
+    border-radius: 10px;
+    background-color: var(--black-col);
+    color: var(--white-col);
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.overlay form .select-status-box .status:first-of-type {
+    margin-left: 50px;
+}
+
+.overlay form .select-status-box .status.selected-status {
+    background-color: var(--blue-col);
+}

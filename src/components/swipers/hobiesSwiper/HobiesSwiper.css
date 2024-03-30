@@ -1,0 +1,128 @@
+.hobies-swiper {
+    width: 100%;
+    height: 250px;
+    z-index: 2;
+    background-color: var(--white-blue-col);
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--white-blue-col);
+
+}
+
+.hobies-swiper .Hobie-slide {
+    width: 140px !important;
+    height: 80% !important;
+    background-color: var(--white-col);
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--aqua-col);
+    margin: 17px 6px;
+}
+
+.hobies-swiper .Hobie-slide .link {
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+    display: grid;
+    grid-template-rows: 65% 35%;
+    position: relative;
+}
+
+.hobies-swiper .Hobie-slide .img-box {
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--aqua-col);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hobies-swiper .Hobie-slide .img-box img {
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+}
+
+.hobies-swiper .Hobie-slide .text-box {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4px;
+
+}
+
+.hobies-swiper .Hobie-slide .text-box .title {
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 2;
+    color: var(--dark-col);
+}
+
+.hobies-swiper .Hobie-slide .text-box .time {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    color: var(--secondary-txt-col);
+}
+
+.hobies-swiper .Hobie-slide .menu-box {
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    width: 28px;
+    height: 28px;
+    background-color: var(--white-col);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 3px var(--white-col);
+    border: none;
+    cursor: pointer;
+}
+
+.hobies-swiper .Hobie-slide .menu-box .icon {
+    color: var(--red-col);
+    font-size: 20px;
+
+}
+
+
+.hobies-swiper .Hobie-slide .hobie-menu {
+    position: absolute;
+    right: 0;
+    top: 140%;
+    width: 110px;
+    padding: 5px;
+    background-color: var(--red-col);
+    border-radius: 7px;
+    border-width: 0 2px 2px;
+    outline-width: 0 2px 2px;
+    z-index: 2;
+}
+
+.hobies-swiper .Hobie-slide .hobie-menu::after {
+    content: "";
+    position: absolute;
+    top: -22%;
+    right: 4px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--red-col) transparent;
+}
+
+.hobies-swiper .Hobie-slide .hobie-menu .btn {
+    cursor: pointer;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    margin: 2px 0;
+    background-color: var(--white-col);
+    color: var(--dark-col);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+
+}

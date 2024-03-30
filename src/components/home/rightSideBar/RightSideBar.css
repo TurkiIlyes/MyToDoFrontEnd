@@ -1,0 +1,174 @@
+.right-side-bar {
+    padding: 0 5px;
+    background-color: #ECEFF1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 355px;
+    height: 580px;
+    /* min-height: 700px; */
+    box-shadow: 0 0 5px var(--white-blue-col);
+    display: grid;
+    grid-template-rows: 16% 84%;
+    z-index: 2;
+}
+
+@media (max-width:767px) {
+    .right-side-bar.show-in-side {
+        display: none;
+    }
+}
+
+@media (min-width:768px) {
+    .right-side-bar.show-in-header {
+        display: none;
+    }
+
+    .right-side-bar.show-in-side {
+        position: sticky;
+        top: 65px;
+    }
+}
+
+
+.right-side-bar .profil-tools {
+    display: flex;
+    align-items: center;
+    padding: 0 15px 0 10px;
+    /* padding: 0 13px 0 5px; */
+    display: grid;
+    grid-template-columns: 32% 68%;
+}
+
+.right-side-bar .profil-tools .user-tools-box {
+    position: relative;
+    height: 70px;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 55px 1fr 18%;
+    align-items: center;
+    /* background-color: brown; */
+
+}
+
+.right-side-bar .profil-tools .user-tools-box img {
+    cursor: pointer;
+    border: 3px dashed var(--aqua-col);
+    outline: 1px solid var(--white-col);
+    box-shadow: 0 0 5px var(--aqua-col);
+    width: 100%;
+    height: 55px;
+    border-radius: 50%;
+
+}
+
+.right-side-bar .profil-tools .user-tools-box .char-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 3px var(--primary-box-sh-col);
+    width: 100%;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--white-col);
+    background-color: var(--aqua-col);
+}
+
+.right-side-bar .profil-tools .user-tools-box .user-name {
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-left: 7px;
+    font-size: 20px;
+    color: var(--primary-txt-col);
+}
+
+.right-side-bar .profil-tools .user-tools-box .menu-icon-box {
+    cursor: pointer;
+    /* width: 36px;
+    height: 36px; */
+    width: 100%;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
+.right-side-bar .profil-tools .user-tools-box .menu-icon-box:hover {
+    background-color: var(--white-blue-col);
+}
+
+.right-side-bar .profil-tools .user-tools-box .icon {
+    color: var(--aqua-col);
+    font-size: 22px;
+}
+
+.right-side-bar .profil-tools .user-tools-box .profile-menu {
+    position: absolute;
+    right: 0;
+    top: 96%;
+    width: 98%;
+    padding: 5px 5px 0;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    border: 2px solid var(--aqua-col);
+    box-shadow: 0 1px 2px var(--white-col);
+    background-color: #F0F0F0;
+}
+
+.right-side-bar .profil-tools .user-tools-box .profile-menu .btn {
+    cursor: pointer;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background-color: var(--aqua-col);
+    color: #F0F0F0;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    box-shadow: 0 0 2px var(--white-col)
+}
+
+
+
+.right-side-bar .calender-box .calender {
+    margin: auto;
+    color: var(--light-col);
+    width: 320px;
+    height: 500px;
+}
+
+.right-side-bar .calender-box .calender .calender-content {
+    /* background-color: brown; */
+}
+
+/* 
+.right-side-bar .show-boxs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.right-side-bar .show-boxs .show-box {
+    display: flex;
+    margin: 0 3px;
+    padding: 6px 8px;
+    border-radius: 20px;
+    background-color: var(--aqua-col);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--black-col);
+    text-transform: capitalize;
+} */

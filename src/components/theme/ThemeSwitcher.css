@@ -1,0 +1,25 @@
+ .theme-box {
+     /* padding-right: 5px; */
+     position: relative;
+     /* background-color: aqua; */
+
+ }
+
+ .theme-box::after {
+     /* content: "";
+     position: absolute;
+     right: -2px;
+     top: 0;
+     width: 1px;
+     height: 100%;
+     background-color: var(--primary-box-sh-col);
+     box-shadow: 0 0 1px var(--primary-box-sh-col); */
+ }
+
+ .theme-box .react-switch {
+     text-transform: uppercase;
+     font-size: 18px;
+     font-weight: 500;
+     color: var(--white-col);
+     box-shadow: 0 0 2px var(--primary-box-sh-col);
+ }

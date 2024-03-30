@@ -1,0 +1,225 @@
+.main-home {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    min-height: 800px;
+    padding: 20px 18px;
+}
+
+@media (min-width:768px) {
+    .main-home {
+        position: relative;
+        /* width: 57%; */
+        padding: 20px 20px;
+    }
+}
+
+@media (min-width:992px) {
+    .main-home {
+        position: relative;
+        /* width: 67%; */
+        padding: 20px 40px 20px 70px;
+    }
+}
+
+@media (min-width:1200px) {
+    .main-home {
+        position: relative;
+        /* width: 69%; */
+        padding: 20px 30px 20px 100px;
+    }
+}
+
+.main-home .search-bar {
+    box-shadow: 0 0 5px var(--white-blue-col);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: var(--white-col);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.main-home .search-bar .icon {
+    margin-left: 15px;
+    color: var(--primary-txt-col);
+
+}
+
+.main-home .search-bar input[type="text"] {
+    flex: 1;
+    height: 100%;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    font-size: 18px;
+    color: var(--primary-txt-col);
+}
+
+.main-home .search-bar input[type="text"]::placeholder {
+    color: var(--primary-txt-col);
+    text-transform: capitalize;
+}
+
+
+
+.main-home .today-activities {
+    margin: 30px 0;
+    padding: 10px 0;
+}
+
+.main-home .today-activities .section-title {
+    text-transform: capitalize;
+    color: var(--light-col);
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.6;
+
+}
+
+.main-home .today-activities .section-box {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main-home .today-activities .section-box .section-desc {
+    margin-top: 7px;
+    margin-right: 15px;
+    color: var(--secondary-txt-col);
+    line-height: 1.6;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+
+.main-home .today-activities .btn {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    width: 135px;
+    border: 1px dashed var(--primary-box-col);
+    outline: 3px solid var(--aqua-col);
+    background-color: var(--aqua-col);
+    border-radius: 7px;
+    box-shadow: 0 0 2px var(--primary-box-sh-col);
+
+}
+
+.main-home .today-activities .btn .icon {
+    margin-left: 10px;
+    font-size: 22px;
+    color: var(--white-col);
+}
+
+.main-home .today-activities .btn span {
+    margin-left: 5px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--white-col);
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .main-home .today-activities .section-title {
+        font-size: 36px;
+    }
+
+    .main-home .today-activities .section-box .section-desc {
+        font-size: 14px;
+    }
+
+    .main-home .today-activities .btn {
+        height: 40px;
+        width: 115px;
+    }
+
+    .main-home .today-activities .btn .icon {
+        font-size: 20px;
+    }
+
+    .main-home .today-activities .btn span {
+        font-size: 16px;
+    }
+}
+
+
+
+/*
+@media (min-width:768px) {
+}
+
+@media (min-width:992px) {
+}
+
+@media (min-width:1200px) {
+} 
+*/
+
+.main-home .section-title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 15px;
+    padding: 0 10px 0 5px;
+}
+
+.main-home .section-title-box .section-title {
+    display: flex;
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--primary-txt-col);
+}
+
+.main-home .section-title-box .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--aqua-col);
+    border: 1px dashed var(--white-col);
+    outline: 2px solid var(--aqua-col);
+    box-shadow: 0 0 5px var(--aqua-col);
+}
+
+.main-home .section-title-box .icon-box .icon {
+    font-size: 16px;
+    color: var(--white-col);
+
+
+}
+
+
+
+.main-home .no-data-box {
+    width: 100%;
+    height: 120px;
+    border-radius: 7px;
+    background-color: var(--white-blue-col);
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 0 3px var(--dark-col); */
+
+}
+
+.main-home .no-data-box span {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--grey-col);
+}
+
+.main-home .no-data-box .icon {
+    font-size: 18px;
+    margin-left: 5px;
+    color: var(--grey-col);
+}
