@@ -40,7 +40,9 @@ const ShowTaskForm = () => {
 
           <div className="show-date-box">
             <span className="title">start :</span>
-            <span className="time">{taskData.startDate}</span>
+            <span className="time">
+              {new Date(taskData.startDate).toDateString()}
+            </span>
           </div>
           {taskData.image !== "null" && (
             <div className="show-image-box">

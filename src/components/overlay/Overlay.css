@@ -52,7 +52,7 @@
     width: 410px;
     padding: 25px;
     padding-bottom: 15px;
-    background-color: var(--white-col);
+    background-color: var(--primary-col);
 }
 
 .overlay form .close-box {
@@ -83,13 +83,13 @@
 .overlay form h1 {
     font-size: 38px;
     font-weight: 500;
-    color: var(--blue-col);
+    color: var(--light-col);
     text-align: center;
     text-transform: capitalize;
 }
 
 .overlay form .sub-title {
-    color: var(--main-txt-col);
+    color: var(--white-col);
     text-align: center;
     font-size: 14px;
     letter-spacing: 0.6px;
@@ -101,8 +101,9 @@
 .overlay form label {
     margin-top: 10px;
     text-transform: capitalize;
-    color: var(--dark-col);
-    font-weight: 500;
+    font-size: 16px;
+    color: #33E1ED;
+    font-weight: 700;
 }
 
 .overlay form input:not([type="file"]) {
@@ -110,10 +111,13 @@
     height: 40px;
     border-radius: 5px;
     outline: none;
-    border: 1px solid var(--grey-col);
-    color: var(--main-txt-col);
-    font-size: 14px;
+    /* border: 1px solid var(--grey-col); */
+    border: none;
+    color: var(--white-col);
+    font-size: 16px;
+    font-weight: 700;
     letter-spacing: 1.6px;
+    background-color: var(--aqua-col);
 
 }
 
@@ -130,17 +134,49 @@
     max-height: 140px;
     border-radius: 5px;
     outline: none;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 700;
     line-height: 1.6;
-    border: 1px solid var(--secondary-txt-col);
-    color: var(--main-txt-col);
+    /* border: 1px solid var(--secondary-txt-col); */
+    border: none;
+    color: var(--white-col);
+    background-color: var(--aqua-col);
 }
 
+.overlay form input:not([type="file"])::placeholder,
+.overlay form input[type="datetime-local"],
+.overlay form input[type="time"],
+.overlay form .task-details::placeholder {
+    /* color: var(--hover-col); */
+    color: var(--white-col);
+    /* opacity: 0.9; */
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.overlay form input[type="datetime-local"],
+.overlay form input[type="time"] {
+    cursor: pointer;
+}
+
+.overlay form input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+.overlay form input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.overlay form input[type="datetime-local"]::selection,
+.overlay form input[type="time"]::selection {
+    background-color: red;
+}
 
 .overlay form input:focus,
+
 .overlay form .task-details:focus {
     border-color: var(--blue-col);
     background-color: var(--white-blue-col);
+    color: var(--aqua-col);
 }
 
 .overlay form .image-box {
@@ -154,7 +190,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border: 2px dashed var(--aqua-col);
+    border: 3px dashed var(--aqua-col);
 }
 
 .overlay form .image-box input[type="file"] {
@@ -168,15 +204,16 @@
 }
 
 .overlay form .image-box .icon {
+    margin-bottom: 5px;
     font-size: 26px;
-    color: var(--blue-col);
+    color: var(--aqua-col);
 
 }
 
 .overlay form .image-box .image-txt {
-    margin-left: 7px;
+    /* margin-left: 7px; */
     text-transform: capitalize;
-    color: var(--blue-col);
+    color: var(--aqua-col);
     font-size: 16px;
     font-weight: 500;
 }
@@ -185,19 +222,22 @@
     display: flex;
     align-items: center;
     height: 40px;
+    margin: 10px 0;
 }
 
 .overlay form .send-email-box .send-email-txt {
     font-size: 18px;
     text-transform: capitalize;
-    color: var(--grey-col);
+    color: var(--white-col);
+    font-weight: 700;
 }
 
 .overlay form .send-email-box .icon {
     margin-left: 15px;
     font-size: 26px;
-    color: var(--blue-col);
+    color: var(--light-col);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .overlay form .form-btn {
@@ -212,7 +252,7 @@
     font-size: 22px;
     letter-spacing: 1.2px;
     text-transform: capitalize;
-    background-color: var(--black-col);
+    background-color: var(--light-col);
     margin-top: 15px;
 }
 
@@ -221,10 +261,12 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
+
 }
 
 
 .overlay form .form-btns .btn {
+
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -233,20 +275,28 @@
     width: 38%;
     border-radius: 25px;
     border: none;
-    font-size: 18px;
+
+    /* font-size: 16px;
+    
+    letter-spacing: 1.2px; */
+
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 1.2px;
     text-transform: capitalize;
+
+
 }
 
 .overlay form .form-btns .btn:first-of-type {
-    background-color: var(--blue-col);
+    background-color: var(--light-col);
     color: var(--white-col);
 }
 
 .overlay form .form-btns .btn:last-of-type {
     background-color: transparent;
-    color: var(--blue-col);
+    color: var(--light-col);
+    /* background-color: red; */
 }
 
 
@@ -269,42 +319,55 @@
 
 
 .overlay form .details {
-    margin: 15px 0;
+    /* max-width: 90%; */
+    padding: 10px 15px;
+    border-radius: 7px;
+    margin: 10px 0 20px;
     color: var(--main-txt-col);
     font-size: 14px;
     letter-spacing: 0.6px;
     line-height: 1.6;
     font-weight: 500;
     text-transform: capitalize;
+    background-color: var(--secondary-col);
 }
 
 
 .overlay form .show-date-box {
-    padding: 0 15px;
+    /* padding: 0 15px; */
     height: 40px;
-    display: flex;
+    /* display: grid;
+    grid-template-columns: 20% 1fr; */
     align-items: center;
+    display: flex;
+    gap: 10px;
+
 }
 
 .overlay form .show-date-box .title {
-    font-size: 18px;
-    font-weight: 500;
+    /* font-size: 18px;
+    font-weight: 500; */
     letter-spacing: 1.6px;
     text-transform: capitalize;
-    color: var(--dark-col);
+    font-size: 18px;
+    /* color: #33E1ED; */
+    color: var(--white-col);
+    font-weight: 700;
 }
 
 .overlay form .show-date-box .time {
+    display: inline;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background-color: var(--aqua-col);
+    /* background-color: var(--aqua-col); */
+    background-color: var(--secondary-col);
     color: var(--white-col);
-    padding: 5px 12px;
+    padding: 7px 15px;
     border-radius: 7px;
-    margin-left: 10px;
-    box-shadow: 0 0 5px var(--aqua-col);
+    /* margin-left: 10px; */
+    /* box-shadow: 0 0 5px var(--aqua-col); */
 }
 
 
@@ -338,7 +401,7 @@
     color: var(--white-col);
     padding: 4px 10px;
     border-radius: 7px;
-    box-shadow: 0 0 5px var(--red-col);
+    /* box-shadow: 0 0 5px var(--red-col); */
 }
 
 
@@ -366,7 +429,7 @@
     overflow: hidden;
     /* border: 2px dashed var(--white-col); */
     background-color: var(--aqua-col);
-    box-shadow: 0 0 5px var(--aqua-col);
+    /* box-shadow: 0 0 5px var(--aqua-col); */
 }
 
 .overlay form .show-image-box .img {
@@ -376,7 +439,7 @@
 
 
 .overlay form .show-status-box {
-    padding: 0 15px;
+    /* padding: 0 15px; */
     height: 40px;
     display: flex;
     align-items: center;
@@ -387,21 +450,21 @@
     font-weight: 500;
     letter-spacing: 1.6px;
     text-transform: capitalize;
-    color: var(--dark-col);
+    color: var(--white-col);
 
 }
 
 .overlay form .show-status-box .status {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background-color: var(--red-col);
+    background-color: var(--secondary-col);
     color: var(--white-col);
-    padding: 5px 12px;
-    border-radius: 20px;
+    padding: 7px 12px;
+    border-radius: 7px;
     margin-left: 10px;
-    box-shadow: 0 0 5px var(--red-col);
+    /* box-shadow: 0 0 5px var(--red-col); */
 
 }
 
@@ -411,29 +474,32 @@
 .overlay form .select-status-box {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .overlay form .select-status-box span {
     text-transform: capitalize;
-    color: var(--dark-col);
-    font-weight: 500;
+    color: #33E1ED;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .overlay form .select-status-box .status {
-    padding: 7px 10px;
+    padding: 8px 10px;
     border-radius: 10px;
-    background-color: var(--black-col);
+    background-color: var(--secondary-col);
     color: var(--white-col);
     margin: 0 5px;
     font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
     cursor: pointer;
 }
 
 .overlay form .select-status-box .status:first-of-type {
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
 .overlay form .select-status-box .status.selected-status {
-    background-color: var(--blue-col);
+    background-color: var(--light-col);
 }

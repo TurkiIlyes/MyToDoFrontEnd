@@ -44,7 +44,7 @@ body.dark {
     --white-blue-col: #7BA9FF;
     --black-col: #000000;
     --red-col: #FF4F5A;
-    --overlay: rgba(255, 255, 255, 0.5);
+
 
 
     /* --bg-col: #121212; */
@@ -57,6 +57,7 @@ body.dark {
     --hover-col: #43434F;
     --aqua-col: #8899A6;
     --main-col: #33E1ED;
+    --overlay: rgba(120, 120, 120, 0.5);
     /* #2C3A47 #192734 #22303C #FFFFFF #8899A6 */
     /* #33E1ED */
     /* #006270 #009394 #00E0C7 */
