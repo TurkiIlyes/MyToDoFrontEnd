@@ -2,6 +2,7 @@
      /* padding-right: 5px; */
      position: relative;
      /* background-color: aqua; */
+     width: 100%;
 
  }
 
@@ -22,4 +23,5 @@
      font-weight: 500;
      color: var(--white-col);
      box-shadow: 0 0 2px var(--primary-box-sh-col);
+     width: 100%;
  }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { Outlet } from "react-router";
+
 import { useSelector } from "react-redux";
 import MainData from "../mainData/MainData";
 import "./MainHome.css";
@@ -29,8 +29,6 @@ const MainHome = () => {
       ) : (
         <MainData />
       )}
-
-      <Outlet />
     </div>
   );
 };

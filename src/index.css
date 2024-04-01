@@ -33,16 +33,33 @@ body.dark {
     --light-col: #424242;
     --dark-col: #121212;
     --aqua-col: #2EC4B6;
+    --aqua-col: #90BEFF;
+
     --grey-col: #757575;
-    --bg-col: #1E1E1E;
+    /* --bg-col: #1E1E1E; */
     --main-txt-col: #E0E0E0;
     --secondary-txt-col: #A0A0A0;
     --white-col: #FFFFFF;
     --blue-col: #4285F4;
     --white-blue-col: #7BA9FF;
     --black-col: #000000;
-    --red-col: #DB4437;
+    --red-col: #FF4F5A;
     --overlay: rgba(255, 255, 255, 0.5);
+
+
+    /* --bg-col: #121212; */
+    /* --bg-col: #090909; */
+    --logo-col: #33E1ED;
+    --bg-col: #15202B;
+    --primary-col: #2C3A47;
+    --secondary-col: #192734;
+    --light-col: #F7AB4B;
+    --hover-col: #43434F;
+    --aqua-col: #8899A6;
+    --main-col: #33E1ED;
+    /* #2C3A47 #192734 #22303C #FFFFFF #8899A6 */
+    /* #33E1ED */
+    /* #006270 #009394 #00E0C7 */
 }
 
 html {
@@ -51,6 +68,10 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+body.active-overlay {
+    overflow: hidden;
 }
 
 ul {

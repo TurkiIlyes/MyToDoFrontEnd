@@ -10,6 +10,7 @@ import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
 import dayjs from "dayjs";
 import { useDispatch } from "react-redux";
 import { setSelectedDate } from "../../redux/slice/AuthSlice";
+import "./Calender.css";
 
 function MyCustomLayout(props) {
   const { toolbar, tabs, content } = usePickerLayout(props);

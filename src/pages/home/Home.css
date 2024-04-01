@@ -1,5 +1,6 @@
 .home-page {
     position: relative;
-    background-color: #F5F5F5;
+    background-color: var(--bg-col);
     display: flex;
+    width: 100%;
 }

@@ -75,7 +75,7 @@ const ThemeSwitcher = () => {
         className="react-switch"
         handleDiameter={28}
         height={42}
-        width={100}
+        width={105}
       />
     </div>
   );
