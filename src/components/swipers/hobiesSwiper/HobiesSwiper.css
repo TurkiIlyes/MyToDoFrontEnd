@@ -2,10 +2,17 @@
     width: 100%;
     height: 250px;
     z-index: 2;
-    background-color: var(--white-blue-col);
-    border-radius: 10px;
-    box-shadow: 0 0 5px var(--white-blue-col);
+    background-color: var(--secondary-col);
+    border-radius: 7px;
 
+}
+
+@media (max-width:767px) {
+    .hobies-swiper {
+        width: calc(100% + 20px);
+        margin-left: -10px;
+
+    }
 }
 
 .hobies-swiper .Hobie-slide {
@@ -13,7 +20,6 @@
     height: 80% !important;
     background-color: var(--white-col);
     border-radius: 10px;
-    box-shadow: 0 0 5px var(--aqua-col);
     margin: 17px 6px;
 }
 
@@ -30,7 +36,7 @@
     border-radius: 7px;
     width: 100%;
     height: 100%;
-    background-color: var(--aqua-col);
+    background-color: var(--dark-blue-col);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,24 +56,42 @@
 }
 
 .hobies-swiper .Hobie-slide .text-box .title {
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 700;
     text-transform: capitalize;
     line-height: 2;
-    color: var(--dark-col);
+    color: var(--dark-blue-col);
 }
+
+
+
+.hobies-swiper .swiper-button-next,
+.hobies-swiper .swiper-button-prev {
+    color: var(--main-col);
+}
+
+.hobies-swiper .swiper-pagination-bullet {
+    background-color: var(--hover-col);
+}
+
+.hobies-swiper .swiper-pagination-bullet-active {
+    background-color: var(--main-col);
+}
+
+
 
 .hobies-swiper .Hobie-slide .text-box .time {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
+    opacity: 0.6;
     letter-spacing: 1.4px;
-    color: var(--secondary-txt-col);
+    color: var(--primary-col);
 }
 
 .hobies-swiper .Hobie-slide .menu-box {
     position: absolute;
-    right: 9px;
-    top: 9px;
+    right: 10px;
+    top: 10px;
     width: 28px;
     height: 28px;
     background-color: var(--white-col);
@@ -76,13 +100,12 @@
     justify-content: center;
     z-index: 1;
     border-radius: 50%;
-    box-shadow: 0 0 3px var(--white-col);
     border: none;
     cursor: pointer;
 }
 
 .hobies-swiper .Hobie-slide .menu-box .icon {
-    color: var(--red-col);
+    color: var(--dark-blue-col);
     font-size: 20px;
 
 }
@@ -119,7 +142,7 @@
     border-radius: 5px;
     margin: 2px 0;
     background-color: var(--white-col);
-    color: var(--dark-col);
+    color: var(--dark-blue-col);
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.5px;

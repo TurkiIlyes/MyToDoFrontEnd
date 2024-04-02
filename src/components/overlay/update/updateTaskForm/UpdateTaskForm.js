@@ -11,6 +11,7 @@ import {
   checkDetails,
   checkStartDate,
   checkUpdateTask,
+  checkUpdateTaskStatus,
 } from "../../../../utils/formValidators/taskFormValidators";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -23,6 +24,7 @@ const UpdateTaskForm = () => {
 
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
+  const [selectedStatus, setSelectedStatus] = useState("To Do");
   const [startDate, setStartDate] = useState("");
   const [checkSendEmail, setCheckSendEmail] = useState(false);
   const [image, setImage] = useState(null);
@@ -38,7 +40,8 @@ const UpdateTaskForm = () => {
       const taskData = await getTaskData(Navigate, id, token);
       setTitle(taskData.data.data.title);
       setDetails(taskData.data.data.details);
-      setStartDate(taskData.data.data.startDate);
+      setSelectedStatus(taskData.data.data.status);
+      setStartDate(taskData.data.data.startDate.slice(0, 19));
       setCheckSendEmail(taskData.data.data.checkSendEmail);
     };
     fetchTask();
@@ -48,6 +51,7 @@ const UpdateTaskForm = () => {
       token,
       title,
       details,
+      status: selectedStatus,
       startDate,
       checkSendEmail,
       image,
@@ -84,18 +88,43 @@ const UpdateTaskForm = () => {
         <span className="error-message">{formErrors.details}</span>
       )}
 
+      <div className="select-status-box">
+        <span>status :</span>
+        {["To Do", "In Progress", "Done"].map((e, i) => {
+          return (
+            <div
+              className={`status ${selectedStatus === e && "selected-status"}`}
+              key={i}
+              onClick={() => {
+                checkUpdateTaskStatus(
+                  e,
+                  setSelectedStatus,
+                  startDate,
+                  setFormErrors
+                );
+              }}
+            >
+              {e}
+            </div>
+          );
+        })}
+      </div>
+      {formErrors.updateTaskStatus && (
+        <span className="error-message">{formErrors.updateTaskStatus}</span>
+      )}
       <label htmlFor="task-date">start date :</label>
       <input
         type="datetime-local"
         name=""
         id="task-date"
         value={startDate}
-        onChange={(e) => checkStartDate(e, setStartDate, setFormErrors)}
+        onChange={(e) =>
+          checkStartDate(e, selectedStatus, setStartDate, setFormErrors)
+        }
       />
       {formErrors.startDate && (
         <span className="error-message">{formErrors.startDate}</span>
       )}
-
       <div className="send-email-box">
         <span className="send-email-txt">send email in time?</span>
         <FontAwesomeIcon
@@ -121,16 +150,23 @@ const UpdateTaskForm = () => {
             : image.name}
         </span>
       </div>
-
+      {formErrors.access && (
+        <span className="error-message">{formErrors.access}</span>
+      )}
       <div className="form-btns">
         <button className="btn" onClick={handleUpdate}>
           update
         </button>
-        <Link to="/home">
-          <button className="btn wrn-message">
-            <span>cancel</span>
-          </button>
-        </Link>
+        {/* <Link to="/home"> */}
+        <button
+          className="btn wrn-message"
+          onClick={() => {
+            Navigate("/home");
+          }}
+        >
+          <span>cancel</span>
+        </button>
+        {/* </Link> */}
       </div>
     </form>
   );

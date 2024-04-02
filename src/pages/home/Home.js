@@ -6,12 +6,12 @@ import "./Home.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getHobies } from "../../redux/slice/AuthSlice";
 const Home = () => {
-  const dispatch = useDispatch();
-  const token = useSelector((state) => state.auth.user.token);
+  // const dispatch = useDispatch();
+  // const token = useSelector((state) => state.auth.user.token);
 
-  useEffect(() => {
-    dispatch(getHobies({ token }));
-  });
+  // useEffect(() => {
+  //   dispatch(getHobies({ token }));
+  // });
 
   return (
     <div className="home-page">

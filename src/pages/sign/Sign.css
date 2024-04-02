@@ -161,7 +161,6 @@
     text-transform: capitalize;
     color: var(--secondary-txt-col);
     font-size: 16px;
-    /*  */
 }
 
 .sign-page main .container .sign-form form input:focus {

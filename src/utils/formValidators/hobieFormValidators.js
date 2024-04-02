@@ -1,3 +1,4 @@
+import { getHobies, setHobiesUpdateState } from "../../redux/slice/AuthSlice";
 import { catchGlobalError, emptyFildsError } from "../services/globalServices";
 import {
   createHobieService,
@@ -55,6 +56,7 @@ export const checkCreateHobie = async (
     if (!formErrors.title && !formErrors.startTime && !formErrors.endTime) {
       try {
         await createHobieService(hobieData, Navigate);
+        dispatch(setHobiesUpdateState());
       } catch (err) {
         catchGlobalError(setFormErrors, err, message, dispatch);
       }
@@ -77,6 +79,7 @@ export const checkUpdateHobie = async (
   if (!formErrors.title && !formErrors.startTime && !formErrors.endTime) {
     try {
       await updateHobieService(hobieData, Navigate);
+      dispatch(setHobiesUpdateState());
     } catch (err) {
       catchGlobalError(setFormErrors, err, message, dispatch);
     }
@@ -95,6 +98,7 @@ export const deleteHobieCheck = async (
   try {
     console.log(hobieData);
     await deleteHobieService(hobieData, Navigate);
+    dispatch(setHobiesUpdateState());
   } catch (err) {
     catchGlobalError(setFormErrors, err, message, dispatch);
   }

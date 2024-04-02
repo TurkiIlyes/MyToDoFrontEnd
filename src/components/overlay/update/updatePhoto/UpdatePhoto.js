@@ -61,11 +61,16 @@ const UpdatePhoto = () => {
         <button className="btn" onClick={handleUpdate}>
           update
         </button>
-        <Link to="/home">
-          <button className="btn wrn-message">
-            <span>cancel</span>
-          </button>
-        </Link>
+        {/* <Link to="/home"> */}
+        <button
+          className="btn wrn-message"
+          onClick={() => {
+            Navigate("/home");
+          }}
+        >
+          <span>cancel</span>
+        </button>
+        {/* </Link> */}
       </div>
     </form>
   );

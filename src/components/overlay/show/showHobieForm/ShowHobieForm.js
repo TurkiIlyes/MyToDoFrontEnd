@@ -44,15 +44,27 @@ const ShowHobieForm = () => {
           )}
 
           <div className="form-btns">
-            <Link to={`/home/updatehobie/${hobieData._id}`}>
-              <button className="btn">edit</button>
-            </Link>
+            {/* <Link to={`/home/updatehobie/${hobieData._id}`}> */}
+            <button
+              className="btn"
+              onClick={() => {
+                Navigate(`/home/updatehobie/${hobieData._id}`);
+              }}
+            >
+              edit
+            </button>
+            {/* </Link> */}
 
-            <Link to="/home">
-              <button className="btn wrn-message">
-                <span>close</span>
-              </button>
-            </Link>
+            {/* <Link to="/home"> */}
+            <button
+              className="btn wrn-message"
+              onClick={() => {
+                Navigate("/home");
+              }}
+            >
+              <span>close</span>
+            </button>
+            {/* </Link> */}
           </div>
         </>
       )}

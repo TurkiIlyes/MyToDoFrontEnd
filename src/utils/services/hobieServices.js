@@ -1,4 +1,22 @@
 import axios from "axios";
+import { logOut } from "../../redux/slice/AuthSlice";
+
+export const getHobies = async (dispatch, Navigate, hobieData) => {
+  try {
+    const hobies = await axios.get(`${process.env.REACT_APP_API_URI}/hobies/`, {
+      headers: { Authorization: hobieData.token },
+    });
+
+    if (hobies.status === 200) {
+      return hobies.data;
+    }
+  } catch (err) {
+    if (err.response.status === 401) {
+      dispatch(logOut());
+    }
+    Navigate("/home");
+  }
+};
 
 export const getHobieData = async (Navigate, HobieId, token) => {
   try {
@@ -28,6 +46,7 @@ export const createHobieService = async (hobieData, Navigate) => {
       Authorization: hobieData.token,
     },
   });
+
   Navigate("/home");
 };
 export const updateHobieService = async (hobieData, Navigate) => {

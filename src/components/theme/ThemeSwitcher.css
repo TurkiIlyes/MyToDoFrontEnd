@@ -22,6 +22,6 @@
      font-size: 18px;
      font-weight: 500;
      color: var(--white-col);
-     box-shadow: 0 0 2px var(--primary-box-sh-col);
+     /* box-shadow: 0 0 2px var(--primary-box-sh-col); */
      width: 100%;
  }

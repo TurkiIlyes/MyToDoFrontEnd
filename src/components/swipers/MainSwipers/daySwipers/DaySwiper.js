@@ -22,13 +22,12 @@ const DaySwiper = ({ gte = 0, lte = 0, name = "" }) => {
 
   useEffect(() => {
     const fetchTasks = async () => {
-      setTasks(
-        await getSelectedDateTasks(dispatch, Navigate, {
-          token,
-          gte: gteDate,
-          lte: lteDate,
-        })
-      );
+      const data = await getSelectedDateTasks(dispatch, Navigate, {
+        token,
+        gte: gteDate,
+        lte: lteDate,
+      });
+      setTasks(data);
     };
     fetchTasks();
   }, []);

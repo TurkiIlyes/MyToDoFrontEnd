@@ -7,57 +7,72 @@
 body.light {
     --primary-txt-col: #607D8B;
     --primary-box-sh-col: #607D8B;
-    --primary-box-col: #F0F0F0;
+    /* --primary-box-col: #F0F0F0; */
 
     /* #6FA7FF; */
-    --light-col: #F7AB4B;
+    /* --light-col: #F7AB4B; */
     --dark-col: #43434F;
-    --aqua-col: #90BEFF;
+    /* --aqua-col: #90BEFF; */
     --grey-col: #757575;
-    --bg-col: #F6F5F8;
+    /* --bg-col: #F6F5F8; */
     --main-txt-col: #2F2F2F;
     --secondary-txt-col: #8B8E97;
-    --white-col: white;
-    --blue-col: #246BFD;
-    --white-blue-col: #ECEFF1;
+    /* --white-col: white; */
+    /* --blue-col: #246BFD; */
+    /* --white-blue-col: #ECEFF1; */
     /* #F0F0F0; */
-    --black-col: #111111;
+    /* --black-col: #111111; */
+    /* --red-col: #FF4F5A; */
+    /* --overlay: #43434f94; */
+
+
+
+
+
+    /* --primary-box-col: #F0F0F0; */
+
+    --primary-col: #F0F0F0;
+    --secondary-col: #192734;
+    --hover-col: #43434F;
+
+    --main-col: #33E1ED;
+    --dark-blue-col: #006270;
+    --med-blue-col: #009394;
+    --light-blue-col: #00E0C7;
+
+    --grey-col: #90BEFF;
+    --bg-col: #F6F5F8;
+    --white-col: #FFFFFF;
+    --white-blue-col: #7BA9FF;
+    --black-col: #000000;
+    --blue-col: #4285F4;
+    --light-col: #F7AB4B;
     --red-col: #FF4F5A;
-    --overlay: #43434f94;
+    --overlay-col: #43434f94;
 }
 
 body.dark {
-
-    --light-col: #C6A8FF;
-
-    --light-col: #424242;
-    --dark-col: #121212;
-    --aqua-col: #2EC4B6;
-    --aqua-col: #90BEFF;
-
-    --grey-col: #757575;
-    /* --bg-col: #1E1E1E; */
-    --main-txt-col: #E0E0E0;
-    --secondary-txt-col: #A0A0A0;
-    --white-col: #FFFFFF;
+    --black-col: #000000;
     --blue-col: #4285F4;
     --white-blue-col: #7BA9FF;
-    --black-col: #000000;
-    --red-col: #FF4F5A;
+    --grey-col: #8899A6;
 
-
-
-    /* --bg-col: #121212; */
-    /* --bg-col: #090909; */
-    --logo-col: #33E1ED;
     --bg-col: #15202B;
     --primary-col: #2C3A47;
     --secondary-col: #192734;
     --light-col: #F7AB4B;
+    --red-col: #FF4F5A;
     --hover-col: #43434F;
-    --aqua-col: #8899A6;
+    --white-col: #FFFFFF;
     --main-col: #33E1ED;
-    --overlay: rgba(120, 120, 120, 0.5);
+    --dark-blue-col: #006270;
+    --med-blue-col: #009394;
+    --light-blue-col: #00E0C7;
+    --overlay-col: rgba(120, 120, 120, 0.5);
+
+    /* --logo-col: #33E1ED; */
+    /* --bg-col: #121212; */
+    /* --bg-col: #090909; */
     /* #2C3A47 #192734 #22303C #FFFFFF #8899A6 */
     /* #33E1ED */
     /* #006270 #009394 #00E0C7 */

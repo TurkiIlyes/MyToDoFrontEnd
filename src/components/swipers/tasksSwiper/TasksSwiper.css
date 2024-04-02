@@ -1,25 +1,27 @@
 .tasks-swiper {
-    width: calc(100% + 20px);
-    margin-left: -10px;
-    height: 230px;
+    width: 100%;
+    height: 250px;
     z-index: 2;
-    /* background-color: var(--white-blue-col); */
-    /* border-radius: 10px; */
-    /* box-shadow: 0 0 5px var(--white-blue-col); */
-    /* padding: 0 50px; */
+    background-color: var(--secondary-col);
+    border-radius: 7px;
 
+}
 
+@media (max-width:767px) {
+    .tasks-swiper {
+        width: calc(100% + 20px);
+        margin-left: -10px;
 
+    }
 }
 
 .tasks-swiper .task-slide {
     width: 250px !important;
-    height: 75% !important;
+    height: 68% !important;
     overflow: hidden;
     background-color: var(--white-col);
     border-radius: 10px;
-    /* box-shadow: 0 0 5px var(--aqua-col); */
-    margin: 23px 10px;
+    margin: 30px 10px;
 }
 
 .tasks-swiper .task-slide .link {
@@ -34,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #006270;
+    background-color: var(--dark-blue-col);
     width: 100%;
     height: 67%;
     border-bottom-left-radius: 40px;
@@ -49,7 +51,7 @@
     bottom: -30px;
     width: 30px;
     height: 30px;
-    background-color: #006270;
+    background-color: var(--dark-blue-col);
     z-index: 1;
 }
 
@@ -57,7 +59,6 @@
     width: 100%;
     height: 100%;
     border-radius: 5px 5px 0 40px;
-    border: 2px solid var(--dark-col);
 }
 
 .tasks-swiper .task-slide .task-status {
@@ -71,7 +72,6 @@
     background-color: var(--red-col);
     color: var(--white-col);
     z-index: 1;
-    /* box-shadow: 0 0 5px var(--red-col); */
 }
 
 .tasks-swiper .task-slide .menu-box {
@@ -86,13 +86,12 @@
     justify-content: center;
     z-index: 2;
     border-radius: 50%;
-    /* box-shadow: 0 0 3px var(--white-col); */
     border: none;
     cursor: pointer;
 }
 
 .tasks-swiper .task-slide .menu-box .icon {
-    color: #006270;
+    color: var(--dark-blue-col);
     font-size: 20px;
 
 }
@@ -131,9 +130,9 @@
     border-radius: 5px;
     margin: 2px 0;
     background-color: var(--white-col);
-    color: var(--dark-col);
+    color: var(--dark-blue-col);
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: capitalize;
 
@@ -169,7 +168,7 @@
 }
 
 .tasks-swiper .task-slide .task-data .task-title {
-    color: #006270;
+    color: var(--dark-blue-col);
     font-size: 22px;
     font-weight: 700;
     text-transform: capitalize;

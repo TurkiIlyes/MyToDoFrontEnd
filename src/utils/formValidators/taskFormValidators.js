@@ -1,3 +1,4 @@
+import { setTasksUpdateState } from "../../redux/slice/AuthSlice";
 import { catchGlobalError, emptyFildsError } from "../services/globalServices";
 import {
   createTaskService,
@@ -45,6 +46,22 @@ export const checkStartDate = (
   //     :
 };
 
+export const checkUpdateTaskStatus = (
+  e,
+  setSelectedStatus,
+  startDate,
+  setFormErrors
+) => {
+  setSelectedStatus(e);
+  setFormErrors((prev) => ({
+    ...prev,
+    updateTaskStatus:
+      e === "To Do" && new Date(startDate).getTime() < Date.now()
+        ? "can't put to do with prev date"
+        : "",
+  }));
+};
+
 export const checkCreateTask = async (
   e,
   formErrors,
@@ -59,6 +76,7 @@ export const checkCreateTask = async (
     if (!formErrors.title && !formErrors.details && !formErrors.startDate) {
       try {
         await createTaskService(taskData, Navigate);
+        dispatch(setTasksUpdateState());
       } catch (err) {
         catchGlobalError(setFormErrors, err, message, dispatch);
       }
@@ -82,10 +100,12 @@ export const checkUpdateTask = async (
     !formErrors.title &&
     !formErrors.details &&
     !formErrors.startDate &&
-    !formErrors.checkSendEmail
+    !formErrors.checkSendEmail &&
+    !formErrors.updateTaskStatus
   ) {
     try {
       await updateTaskService(taskData, Navigate);
+      dispatch(setTasksUpdateState());
     } catch (err) {
       catchGlobalError(setFormErrors, err, message, dispatch);
     }
@@ -103,6 +123,7 @@ export const deleteTaskCheck = async (
   e.preventDefault();
   try {
     await deleteTaskService(taskData, Navigate);
+    dispatch(setTasksUpdateState());
   } catch (err) {
     catchGlobalError(setFormErrors, err, message, dispatch);
   }

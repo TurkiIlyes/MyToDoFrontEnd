@@ -1,14 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import HobiesSwiper from "../../swipers/hobiesSwiper/HobiesSwiper";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import SelectedDateSwiper from "../../swipers/MainSwipers/selectedDateSwiper/SelectedDateSwiper";
 import DaySwiper from "../../swipers/MainSwipers/daySwipers/DaySwiper";
+import {
+  resetHobiesUpdateState,
+  resetTasksUpdateState,
+} from "../../../redux/slice/AuthSlice";
+import { getHobies } from "../../../utils/services/hobieServices";
 
 const MainData = () => {
-  const hobies = useSelector((state) => state.auth.hobies);
+  // const hobies = useSelector((state) => state.auth.hobies);
+
+  const dispatch = useDispatch();
+  // const token = useSelector((state) => state.auth.user.token);
+
+  const hobiesUpdateState = useSelector(
+    (state) => state.auth.hobiesUpdateState
+  );
+  const tasksUpdateState = useSelector((state) => state.auth.tasksUpdateState);
+
+  useEffect(() => {
+    hobiesUpdateState && dispatch(resetHobiesUpdateState());
+  }, [hobiesUpdateState, dispatch]);
+
+  useEffect(() => {
+    tasksUpdateState && dispatch(resetTasksUpdateState());
+  }, [tasksUpdateState, dispatch]);
+
   return (
     <>
       <div className="today-activities">
@@ -34,18 +56,15 @@ const MainData = () => {
         </Link>
       </div>
 
-      {hobies.results ? (
-        <HobiesSwiper />
-      ) : (
-        <div className="no-data-box">
-          <span>no data found</span>
-          <FontAwesomeIcon icon={faCircleExclamation} className="icon" />
-        </div>
-      )}
-      <SelectedDateSwiper />
-      <DaySwiper gte={2} lte={1} name="tomorow" />
-      <DaySwiper gte={7} lte={0} name="current week" />
-      <DaySwiper gte={14} lte={7} name="next week" />
+      {!hobiesUpdateState ? <HobiesSwiper /> : null}
+      {!tasksUpdateState ? (
+        <>
+          <SelectedDateSwiper />
+          <DaySwiper lte={2} gte={1} name="tomorow" />
+          <DaySwiper lte={7} gte={0} name="current week" />
+          <DaySwiper lte={14} gte={7} name="next week" />
+        </>
+      ) : null}
     </>
   );
 };

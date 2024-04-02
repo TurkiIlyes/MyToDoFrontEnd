@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./HobiesSwiper.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -11,9 +11,10 @@ import { Pagination, Navigation } from "swiper/modules";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
-
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getHobies } from "../../../utils/services/hobieServices";
 
 const Slide = ({ data }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -57,27 +58,53 @@ const Slide = ({ data }) => {
 };
 
 const HobiesSwiper = () => {
-  const hobies = useSelector((state) => state.auth.hobies.data);
-  return (
-    <Swiper
-      grabCursor={true}
-      centeredSlides={true}
-      loop={true}
-      slidesPerView={"auto"}
-      pagination={{ clickable: true }}
-      modules={[Pagination, Navigation]}
-      className="hobies-swiper"
-    >
-      {hobies.map((hobieData, i) => {
-        return (
-          <SwiperSlide className="Hobie-slide" key={i}>
-            <Slide data={hobieData} />
-          </SwiperSlide>
-        );
-      })}
+  // const hobies = useSelector((state) => state.auth.hobies.data);
 
-      <div className="swiper-pagination"></div>
-    </Swiper>
+  const dispatch = useDispatch();
+  const Navigate = useNavigate();
+  const [hobies, setHobies] = useState([]);
+  const token = useSelector((state) => state.auth.user.token);
+
+  useEffect(() => {
+    const fetchHobies = async () => {
+      const data = await getHobies(dispatch, Navigate, { token });
+      setHobies(data.data);
+    };
+    fetchHobies();
+  }, []);
+
+  return (
+    <>
+      {hobies.length ? (
+        <Swiper
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={"auto"}
+          pagination={{ clickable: true }}
+          navigation={{
+            clickable: true,
+          }}
+          modules={[Pagination, Navigation]}
+          className="hobies-swiper"
+        >
+          {hobies.map((hobieData, i) => {
+            return (
+              <SwiperSlide className="Hobie-slide" key={i}>
+                <Slide data={hobieData} />
+              </SwiperSlide>
+            );
+          })}
+
+          <div className="swiper-pagination"></div>
+        </Swiper>
+      ) : (
+        <div className="no-data-box">
+          <span>no data found</span>
+          <FontAwesomeIcon icon={faCircleExclamation} className="icon" />
+        </div>
+      )}
+    </>
   );
 };
 

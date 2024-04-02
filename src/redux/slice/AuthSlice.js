@@ -1,12 +1,12 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice } from "@reduxjs/toolkit";
+// import axios from "axios";
 
-export const getHobies = createAsyncThunk("user/hobies", async (data) => {
-  const hobies = await axios.get(`${process.env.REACT_APP_API_URI}/hobies/`, {
-    headers: { Authorization: data.token },
-  });
-  return hobies.data;
-});
+// export const getHobies = createAsyncThunk("user/hobies", async (data) => {
+//   const hobies = await axios.get(`${process.env.REACT_APP_API_URI}/hobies/`, {
+//     headers: { Authorization: data.token },
+//   });
+//   return hobies.data;
+// });
 // ?${data.q ? "q=" + data.q : ""}
 // export const getTasks = createAsyncThunk("user/tasks", async (data) => {
 //   const tasks = await axios.get(`${process.env.REACT_APP_API_URI}/tasks/`, {
@@ -20,10 +20,12 @@ const AuthSlice = createSlice({
   initialState: {
     isAuthenticated: false,
     user: null,
-    hobies: {
-      results: 0,
-      data: [],
-    },
+    // hobies: {
+    //   results: 0,
+    //   data: [],
+    // },
+    hobiesUpdateState: false,
+    tasksUpdateState: false,
     // tasks: {
     //   results: 0,
     //   data: [],
@@ -61,8 +63,20 @@ const AuthSlice = createSlice({
       state.user = action.payload.user;
       state.isAuthenticated = action.payload.isAuthenticated;
     },
-    getHobies(state, action) {
-      state.hobies = action.payload;
+    // getHobies(state, action) {
+    //   state.hobies = action.payload;
+    // },
+    setHobiesUpdateState(state) {
+      state.hobiesUpdateState = true;
+    },
+    resetHobiesUpdateState(state) {
+      state.hobiesUpdateState = false;
+    },
+    setTasksUpdateState(state) {
+      state.tasksUpdateState = true;
+    },
+    resetTasksUpdateState(state) {
+      state.tasksUpdateState = false;
     },
     // getTasks(state, action) {
     //   state.tasks = action.payload;
@@ -71,14 +85,14 @@ const AuthSlice = createSlice({
       state.selectedDate = action.payload;
     },
   },
-  extraReducers: (builder) => {
-    builder.addCase(getHobies.fulfilled, (state, action) => {
-      state.hobies = action.payload;
-    });
-    // .addCase(getTasks.fulfilled, (state, action) => {
-    //   state.tasks = action.payload;
-    // });
-  },
+  // extraReducers: (builder) => {
+  //   builder.addCase(getHobies.fulfilled, (state, action) => {
+  //     state.hobies = action.payload;
+  //   });
+  // .addCase(getTasks.fulfilled, (state, action) => {
+  //   state.tasks = action.payload;
+  // });
+  // },
 });
 
 export const {
@@ -88,5 +102,9 @@ export const {
   setAuthStatus,
   resetPassword,
   setSelectedDate,
+  setHobiesUpdateState,
+  resetHobiesUpdateState,
+  setTasksUpdateState,
+  resetTasksUpdateState,
 } = AuthSlice.actions;
 export default AuthSlice.reducer;

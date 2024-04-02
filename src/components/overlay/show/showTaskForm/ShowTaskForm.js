@@ -31,7 +31,9 @@ const ShowTaskForm = () => {
         <>
           <OverlayCloseBtn />
           <h1>{taskData.title}</h1>
-          <span className="details">{taskData.details}</span>
+          {taskData.details ? (
+            <span className="details">{taskData.details}</span>
+          ) : null}
 
           <div className="show-status-box">
             <span className="title">status :</span>
@@ -55,15 +57,27 @@ const ShowTaskForm = () => {
           )}
 
           <div className="form-btns">
-            <Link to={`/home/updatetask/${taskData._id}`}>
-              <button className="btn">edit</button>
-            </Link>
+            {/* <Link to={}> */}
+            <button
+              className="btn"
+              onClick={() => {
+                Navigate(`/home/updatetask/${taskData._id}`);
+              }}
+            >
+              edit
+            </button>
+            {/* </Link> */}
 
-            <Link to="/home">
-              <button className="btn wrn-message">
-                <span>close</span>
-              </button>
-            </Link>
+            {/* <Link to="/home"> */}
+            <button
+              className="btn wrn-message"
+              onClick={() => {
+                Navigate("/home");
+              }}
+            >
+              <span>close</span>
+            </button>
+            {/* </Link> */}
           </div>
         </>
       )}

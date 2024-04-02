@@ -1,12 +1,7 @@
-/*  */
-/*  */
-/*  */
 header {
-    /* background-color: var(--white-col); */
     background-color: var(--secondary-col);
     position: sticky;
     top: 0;
-    /* box-shadow: 0 1px 5px var(--white-blue-col); */
     z-index: 9999;
 }
 
@@ -15,7 +10,7 @@ header .container {
 }
 
 header .container>.logo {
-    color: var(--logo-col);
+    color: var(--main-col);
     height: 65px;
     font-size: 30px;
     display: flex;
@@ -36,7 +31,7 @@ header .container>nav {
 header .container nav>.menu-icon {
     cursor: pointer;
     font-size: 30px;
-    color: #00E0C7;
+    color: var(--main-col);
     margin-right: 15px;
     position: relative;
 }

@@ -6,6 +6,7 @@ const getTaskStartDate = (task) => {
   const startDate = moment(task.startDate).tz("Africa/Tunis");
 
   const now = moment().tz("Africa/Tunis");
+  now.utcOffset(0, true);
   const timeDifference = Math.abs(startDate.toDate() - now.toDate());
 
   const units = [
@@ -53,6 +54,8 @@ export const getLteGteDate = (date, gte = 0, lte = 0) => {
     date.getMonth(),
     date.getDate() + lte
   );
+  console.log("gte", gteDate);
+  console.log("lte", lteDate);
   return { gteDate, lteDate };
 };
 
@@ -111,6 +114,9 @@ export const getSelectedDateTasks = async (dispatch, Navigate, taskData) => {
       }
     );
     if (data.status === 200) {
+      console.log("###############");
+      console.log(data);
+      console.log("###############");
       return data.data;
     }
   } catch (err) {
@@ -141,6 +147,7 @@ export const updateTaskService = async (taskData, Navigate) => {
   const formData = new FormData();
   formData.append("title", taskData.title);
   formData.append("details", taskData.details);
+  formData.append("status", taskData.status);
   formData.append("startDate", taskData.startDate);
   formData.append("checkSendEmail", taskData.checkSendEmail);
   formData.append("image", taskData.image);
