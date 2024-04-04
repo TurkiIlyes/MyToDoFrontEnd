@@ -31,6 +31,10 @@
     background-color: var(--grey-col) !important;
 }
 
+.css-15a0tn7:not(.Mui-selected) {
+    color: var(--grey-col) !important;
+    border: 1px solid var(--grey-col) !important;
+}
 
 /* .css-cyfsxc-MuiPickersCalendarHeader-labelContainer,
 .css-12mkn7b-MuiButtonBase-root-MuiIconButton-root-MuiPickersCalendarHeader-switchViewButton,
