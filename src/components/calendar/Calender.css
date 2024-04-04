@@ -6,7 +6,7 @@
 }
 
 .right-side-bar .calender-box .calender .calender-content {
-    color: var(--white-col);
+    color: var(--white-col) !important;
 }
 
 .css-1hbyad5-MuiTypography-root {
