@@ -124,6 +124,17 @@
     z-index: 2;
 }
 
+.hobies-swiper .menu-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: transparent;
+}
+
 .hobies-swiper .Hobie-slide .hobie-menu::after {
     content: "";
     position: absolute;

@@ -5,6 +5,7 @@
     background-color: var(--secondary-col);
     border-radius: 7px;
 
+
 }
 
 @media (max-width:767px) {
@@ -84,10 +85,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 5;
     border-radius: 50%;
     border: none;
     cursor: pointer;
+}
+
+.tasks-swiper .menu-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: transparent;
 }
 
 .tasks-swiper .task-slide .menu-box .icon {

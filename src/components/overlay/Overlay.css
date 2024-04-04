@@ -36,6 +36,13 @@
     background-color: var(--primary-col);
 }
 
+@media (max-width:767px) {
+    .overlay form {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+}
+
 .overlay form .close-box {
     position: absolute;
     right: 15px;
@@ -454,4 +461,15 @@
 
 .overlay form .select-status-box .status.selected-status {
     background-color: var(--light-col);
+}
+
+@media (max-width: 575px) {
+    .overlay form .select-status-box .status {
+        padding: 7px;
+        /* font-size: 12px; */
+    }
+
+    .overlay form .select-status-box .status:first-of-type {
+        margin-left: 10px;
+    }
 }

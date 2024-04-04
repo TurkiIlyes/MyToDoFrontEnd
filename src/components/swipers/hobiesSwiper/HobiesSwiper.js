@@ -16,12 +16,22 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getHobies } from "../../../utils/services/hobieServices";
 
-const Slide = ({ data }) => {
+const Slide = ({ data, showOverlay, setShowOverlay }) => {
   const [showMenu, setShowMenu] = useState(false);
-  console.log(data);
+
+  const handleMenu = () => {
+    setShowMenu((prev) => !prev);
+    setShowOverlay((prev) => !prev);
+  };
+  useEffect(() => {
+    if (!showOverlay) {
+      setShowMenu(false);
+    }
+  }, [showOverlay]);
+
   return (
     <>
-      <div className="menu-box" onClick={() => setShowMenu((prev) => !prev)}>
+      <div className="menu-box" onClick={handleMenu}>
         <FontAwesomeIcon icon={faEllipsis} className="icon" />
         {showMenu && (
           <div className="hobie-menu">
@@ -59,7 +69,7 @@ const Slide = ({ data }) => {
 
 const HobiesSwiper = () => {
   // const hobies = useSelector((state) => state.auth.hobies.data);
-
+  const [showOverlay, setShowOverlay] = useState(false);
   const dispatch = useDispatch();
   const Navigate = useNavigate();
   const [hobies, setHobies] = useState([]);
@@ -91,11 +101,22 @@ const HobiesSwiper = () => {
           {hobies.map((hobieData, i) => {
             return (
               <SwiperSlide className="Hobie-slide" key={i}>
-                <Slide data={hobieData} />
+                <Slide
+                  data={hobieData}
+                  showOverlay={showOverlay}
+                  setShowOverlay={setShowOverlay}
+                />
               </SwiperSlide>
             );
           })}
-
+          {showOverlay && (
+            <div
+              className="menu-overlay"
+              onClick={() => {
+                setShowOverlay(false);
+              }}
+            ></div>
+          )}
           <div className="swiper-pagination"></div>
         </Swiper>
       ) : (

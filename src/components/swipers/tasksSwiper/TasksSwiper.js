@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,12 +16,22 @@ import "./TasksSwiper.css";
 import { Link } from "react-router-dom";
 import { getStatus } from "../../../utils/services/taskServices";
 
-const Slide = ({ task }) => {
+const Slide = ({ task, showOverlay, setShowOverlay }) => {
   const [showMenu, setShowMenu] = useState(false);
 
+  // console.log("showOverlay", showOverlay, "showMenu", showMenu);
+  const handleMenu = () => {
+    setShowMenu((prev) => !prev);
+    setShowOverlay((prev) => !prev);
+  };
+  useEffect(() => {
+    if (!showOverlay) {
+      setShowMenu(false);
+    }
+  }, [showOverlay]);
   return (
     <>
-      <div className="menu-box" onClick={() => setShowMenu((prev) => !prev)}>
+      <div className="menu-box" onClick={handleMenu}>
         <FontAwesomeIcon icon={faEllipsis} className="icon" />
         {showMenu && (
           <div className="task-menu">
@@ -55,7 +65,7 @@ const Slide = ({ task }) => {
 };
 
 const TasksSwiper = ({ tasks }) => {
-  console.log(tasks);
+  const [showOverlay, setShowOverlay] = useState(false);
   return (
     <Swiper
       grabCursor={true}
@@ -72,11 +82,22 @@ const TasksSwiper = ({ tasks }) => {
       {tasks.map((task, i) => {
         return (
           <SwiperSlide className="task-slide" key={i}>
-            <Slide task={task} />
+            <Slide
+              task={task}
+              showOverlay={showOverlay}
+              setShowOverlay={setShowOverlay}
+            />
           </SwiperSlide>
         );
       })}
-
+      {showOverlay && (
+        <div
+          className="menu-overlay"
+          onClick={() => {
+            setShowOverlay(false);
+          }}
+        ></div>
+      )}
       <div className="swiper-pagination"></div>
     </Swiper>
   );

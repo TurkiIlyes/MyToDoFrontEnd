@@ -19,7 +19,7 @@ const RightSideBar = ({ showSideBar }) => {
   const handleLogOut = () => {
     dispatch(logOut());
   };
-  console.log(user.image !== "null");
+
   return (
     <div
       className={`right-side-bar ${
@@ -49,23 +49,32 @@ const RightSideBar = ({ showSideBar }) => {
           >
             <FontAwesomeIcon icon={faAngleDown} className="icon" />
           </button>
+
           {showMenu && (
-            <div className="profile-menu">
-              <Link to="/home/updateinfo">
-                <button className="btn">update info</button>
-              </Link>
-              <Link to="/home/updatepassword">
-                <button className="btn">update password</button>
-              </Link>
-              <Link to="/home/deleteaccount">
-                <button className="btn">delete account</button>
-              </Link>
-              {showSideBar && (
-                <NavLink to="/signin" onClick={handleLogOut}>
-                  <button className="btn">log out</button>
-                </NavLink>
-              )}
-            </div>
+            <>
+              <div
+                className="menu-overlay"
+                onClick={() => {
+                  setShowMenu(false);
+                }}
+              ></div>
+              <div className="profile-menu">
+                <Link to="/home/updateinfo">
+                  <button className="btn">update info</button>
+                </Link>
+                <Link to="/home/updatepassword">
+                  <button className="btn">update password</button>
+                </Link>
+                <Link to="/home/deleteaccount">
+                  <button className="btn">delete account</button>
+                </Link>
+                {showSideBar && (
+                  <NavLink to="/signin" onClick={handleLogOut}>
+                    <button className="btn">log out</button>
+                  </NavLink>
+                )}
+              </div>
+            </>
           )}
         </div>
       </div>

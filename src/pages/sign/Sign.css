@@ -227,8 +227,10 @@
 
 .sign-page main .container .sign-data {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    padding-top: 5px;
+
 }
 
 @media (max-width:991px) {

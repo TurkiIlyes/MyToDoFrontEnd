@@ -2,13 +2,19 @@
     background-color: var(--primary-col);
     position: absolute;
     right: 10px;
-    top: 0;
-    width: 330px;
+    top: 10px;
+    width: 340px;
     height: 525px;
     display: grid;
     grid-template-rows: 16% 84%;
     z-index: 2;
     border-radius: 10px;
+}
+
+@media (max-width: 575px) {
+    .right-side-bar {
+        right: 5px;
+    }
 }
 
 @media (max-width:767px) {
@@ -25,6 +31,7 @@
     .right-side-bar.show-in-side {
         position: sticky;
         top: 75px;
+        width: 330px;
     }
 }
 
@@ -103,6 +110,17 @@
     font-size: 22px;
 }
 
+
+.right-side-bar .profil-tools .user-tools-box .menu-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
 .right-side-bar .profil-tools .user-tools-box .profile-menu {
     position: absolute;
     right: 0;
@@ -110,7 +128,7 @@
     width: 98%;
     padding: 6px 6px 0;
     border-radius: 0 0 10px 10px;
-    z-index: 2;
+    z-index: 3;
     border: 3px solid var(--hover-col);
     background-color: var(--primary-col);
 }
