@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import ReactSwitch from "react-switch";
 
@@ -8,12 +8,21 @@ import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import "./ThemeSwitcher.css";
 
 const ThemeSwitcher = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(document.body.className);
+  console.log("toktok", theme);
+  // useEffect(() => {
+  //   setTheme(() =>
+  //     document.body.classList.contains("light") ? "light" : "dark"
+  //   );
+  //   console.log("toktok", theme);
+  // }, []);
+
   const handleChangeTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
     document.body.classList.toggle("light");
     document.body.classList.toggle("dark");
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
+
   return (
     <div className="theme-box">
       <ReactSwitch

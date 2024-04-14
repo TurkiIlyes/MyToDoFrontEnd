@@ -69,7 +69,7 @@ const SearchData = ({ searchData }) => {
           );
         })
       ) : (
-        <h1>No data found</h1>
+        <h1 style={{ color: "white", fontSize: "18px" }}>No data found</h1>
       )}
     </div>
   );

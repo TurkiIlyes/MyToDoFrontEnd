@@ -49,15 +49,42 @@ body.light {
     --light-col: #F7AB4B;
     --red-col: #FF4F5A;
     --overlay-col: #43434f94;
+
+
+
+
+    --bg-col: #F6F5F8;
+    --header-col: #FFFFFF;
+    --secondary-col: transparent;
+    --primary-col: #FFFFFF;
+    --box-sh-col: #0061706b;
+    --main-col: #009394;
+
+    --black-col: #000000;
+    --blue-col: #4285F4;
+    --white-blue-col: #7BA9FF;
+    --grey-col: #8899A6;
+    --light-col: #F7AB4B;
+    --red-col: #FF4F5A;
+    --hover-col: #43434F;
+    --white-col: #FFFFFF;
+
+    --dark-blue-col: #006270;
+    --med-blue-col: #009394;
+    --light-blue-col: #00E0C7;
+    --overlay-col: rgba(120, 120, 120, 0.5);
 }
 
 body.dark {
+    --box-sh-col: transparent;
+
     --black-col: #000000;
     --blue-col: #4285F4;
     --white-blue-col: #7BA9FF;
     --grey-col: #8899A6;
 
     --bg-col: #15202B;
+    --header-col: #2C3A47;
     --primary-col: #2C3A47;
     --secondary-col: #192734;
     --light-col: #F7AB4B;
@@ -100,7 +127,8 @@ a {
 
 .container {
     margin: 0 auto;
-    padding: 0 15px;
+    /* padding: 0 15px; */
+    padding: 0 7px;
 }
 
 @media (min-width:768px) {

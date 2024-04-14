@@ -21,6 +21,7 @@
     background-color: var(--white-col);
     border-radius: 10px;
     margin: 17px 6px;
+    box-shadow: 0 0 5px var(--box-sh-col);
 }
 
 .hobies-swiper .Hobie-slide .link {

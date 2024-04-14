@@ -36,11 +36,15 @@
     border: 1px solid var(--grey-col) !important;
 }
 
-/* .css-cyfsxc-MuiPickersCalendarHeader-labelContainer,
+/* Dev Mode */
+
+.css-cyfsxc-MuiPickersCalendarHeader-labelContainer,
 .css-12mkn7b-MuiButtonBase-root-MuiIconButton-root-MuiPickersCalendarHeader-switchViewButton,
 .css-kg9q0s-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button,
 .css-1nkg345-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button,
 .css-rhmlg1-MuiTypography-root-MuiDayCalendar-weekDayLabel,
 .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root {
     color: var(--white-col) !important;
-} */
+}
+
+/* Dev Mode */

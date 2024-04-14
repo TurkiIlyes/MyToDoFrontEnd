@@ -1,8 +1,9 @@
 header {
-    background-color: var(--secondary-col);
+    background-color: var(--header-col);
     position: sticky;
     top: 0;
     z-index: 9999;
+    box-shadow: 0 0 5px var(--box-sh-col);
 }
 
 header .container {
@@ -12,7 +13,7 @@ header .container {
 header .container>.logo {
     color: var(--main-col);
     height: 65px;
-    font-size: 30px;
+    font-size: 36px;
     display: flex;
     align-items: center;
     text-transform: capitalize;
@@ -96,22 +97,22 @@ header .container nav ul li>a {
     font-weight: 500;
     text-transform: capitalize;
     margin: 0 5px;
-    width: 110px;
-    height: 40px;
-    border-radius: 20px;
+    width: 96px;
+    height: 38px;
+    border-radius: 10px;
     outline: none;
     border: none;
     letter-spacing: 0.7px;
-    color: var(--white-blue-col);
-    background-color: var(--black-col);
-    box-shadow: 0 0 2px var(--black-col);
+    color: var(--white-col);
+    background-color: var(--dark-blue-col);
+    box-shadow: 0 0 2px var(--box-sh-col);
 
 }
 
 header .container nav ul li>a.active {
     color: var(--white-col);
-    background-color: var(--blue-col);
-    box-shadow: 0 0 2px var(--blue-col);
+    background-color: var(--light-blue-col);
+    box-shadow: 0 0 2px var(--box-sh-col);
 }
 
 header .container nav ul li>a.log-out {

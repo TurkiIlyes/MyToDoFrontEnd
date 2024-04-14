@@ -9,6 +9,8 @@
     grid-template-rows: 16% 84%;
     z-index: 2;
     border-radius: 10px;
+
+    box-shadow: 0 0 5px var(--box-sh-col);
 }
 
 @media (max-width: 575px) {

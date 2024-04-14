@@ -54,6 +54,7 @@ const AuthSlice = createSlice({
     logOut(state) {
       state.isAuthenticated = false;
       state.user = null;
+      document.body.className = "light";
     },
     setAuthStatus(state, action) {
       state.isAuthenticated = action.payload;

@@ -110,7 +110,7 @@
     height: 40px;
     border-radius: 5px;
     outline: none;
-    border: 1px solid var(--secondary-txt-col);
+    border: 1px solid var(--dark-blue-col);
     color: var(--main-txt-col);
 
 }
@@ -187,7 +187,7 @@
     font-size: 22px;
     letter-spacing: 1.2px;
     text-transform: capitalize;
-    background-color: var(--black-col);
+    background-color: var(--dark-blue-col);
 }
 
 .sign-page main .container .sign-form form .terms-box {
@@ -219,7 +219,7 @@
 
 .sign-page main .container .sign-form form .log-box .change-path {
     text-decoration: none;
-    color: var(--blue-col);
+    color: var(--light-blue-col);
     font-size: 14px;
     font-weight: 700;
 }
