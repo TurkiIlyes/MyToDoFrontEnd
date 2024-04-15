@@ -36,7 +36,7 @@ const LandingSwiper = () => {
         }}
         modules={[Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="mySwiper"
+        className="landing-swiper"
       >
         <SwiperSlide>
           <img

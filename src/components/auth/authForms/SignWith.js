@@ -16,7 +16,7 @@ const SignWith = () => {
           src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"
           alt=""
         />
-        <span>continue with apple</span>
+        <span>continue with facebook</span>
       </button>
       <div className="sep-box">
         <hr />
