@@ -38,11 +38,12 @@
     background-color: var(--primary-col);
     border-radius: 7px;
     overflow: hidden;
+    box-shadow: 0 0 2px var(--box-sh-col);
 }
 
 .main-home .search-bar .icon {
     margin-left: 15px;
-    color: var(--white-col);
+    color: var(--main-text-col);
 
 }
 
@@ -54,12 +55,12 @@
     outline: none;
     padding-left: 5px;
     font-size: 18px;
-    color: var(--white-col);
+    color: var(--main-text-col);
     background-color: transparent;
 }
 
 .main-home .search-bar input[type="text"]::placeholder {
-    color: var(--white-col);
+    color: var(--main-text-col);
     text-transform: capitalize;
 }
 
@@ -90,7 +91,7 @@
 .main-home .today-activities .section-box .section-desc {
     margin-top: 7px;
     margin-right: 15px;
-    color: var(--white-col);
+    color: var(--sec-text-col);
     line-height: 1.6;
     font-size: 14px;
     font-weight: 500;
@@ -194,7 +195,7 @@
     width: 100%;
     height: 120px;
     border-radius: 7px;
-    background-color: var(--secondary-col);
+    background-color: var(--focus-col);
     display: flex;
     justify-content: center;
     align-items: center;

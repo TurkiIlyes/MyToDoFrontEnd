@@ -9,8 +9,8 @@
     grid-template-rows: 16% 84%;
     z-index: 2;
     border-radius: 10px;
-
-    box-shadow: 0 0 5px var(--box-sh-col);
+    /* box-shadow: 0 0 5px var(--box-sh-col); */
+    box-shadow: 0 0 3px var(--box-sh-col);
 }
 
 @media (max-width: 575px) {
@@ -88,7 +88,7 @@
     letter-spacing: 1px;
     padding-left: 7px;
     font-size: 20px;
-    color: var(--white-col);
+    color: var(--main-text-col);
 }
 
 .right-side-bar .profil-tools .user-tools-box .menu-icon-box {

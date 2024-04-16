@@ -19,7 +19,7 @@ const RightSideBar = ({ showSideBar }) => {
   const handleLogOut = () => {
     dispatch(logOut());
   };
-
+  console.log(user.name.slice(0, 12));
   return (
     <div
       className={`right-side-bar ${
@@ -41,7 +41,7 @@ const RightSideBar = ({ showSideBar }) => {
           </Link>
 
           <span className="user-name">
-            {user.name.length <= 12 ? user.name : user.name.slice(12)}
+            {user.name.length < 8 ? user.name : user.name.slice(0, 8)}
           </span>
           <button
             className="menu-icon-box"

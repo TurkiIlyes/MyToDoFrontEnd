@@ -2,7 +2,7 @@
     width: 100%;
     height: 250px;
     z-index: 2;
-    background-color: var(--secondary-col);
+    background-color: var(--focus-col);
     border-radius: 7px;
 
 }
@@ -69,7 +69,7 @@
 
 
 
-.hobies-swiper .swiper-button-next,
+/* .hobies-swiper .swiper-button-next,
 .hobies-swiper .swiper-button-prev {
     color: var(--main-col);
 }
@@ -80,7 +80,7 @@
 
 .hobies-swiper .swiper-pagination-bullet-active {
     background-color: var(--main-col);
-}
+} */
 
 
 
@@ -89,7 +89,7 @@
     font-weight: 700;
     opacity: 0.6;
     letter-spacing: 1.4px;
-    color: var(--primary-col);
+    color: var(--dark-grey);
 }
 
 .hobies-swiper .Hobie-slide .menu-box {
@@ -163,4 +163,37 @@
     letter-spacing: 0.5px;
     text-transform: capitalize;
 
+}
+
+
+
+.hobies-swiper .swiper-button-next,
+.hobies-swiper .swiper-button-prev {
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    background-color: var(--dark-blue-col);
+    /* border: 1px solid var(--white-col); */
+    box-shadow: 0 0 2px var(--white-sh-col);
+}
+
+.hobies-swiper .swiper-button-next:hover,
+.hobies-swiper .swiper-button-prev:hover {
+    border-color: var(--light-blue-col);
+}
+
+.hobies-swiper .swiper-button-next::after,
+.hobies-swiper .swiper-button-prev::after {
+    font-size: 20px;
+    color: var(--white-col);
+}
+
+.hobies-swiper .swiper-button-next:hover::after,
+.hobies-swiper .swiper-button-prev:hover::after {
+    color: var(--light-blue-col);
+}
+
+
+.hobies-swiper .swiper-pagination-bullet-active {
+    background-color: var(--dark-blue-col);
 }

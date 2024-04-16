@@ -2,7 +2,7 @@
     width: 100%;
     height: 250px;
     z-index: 2;
-    background-color: var(--secondary-col);
+    background-color: var(--focus-col);
     border-radius: 7px;
 
 
@@ -23,6 +23,7 @@
     background-color: var(--white-col);
     border-radius: 10px;
     margin: 30px 10px;
+    box-shadow: 0 0 1px var(--blue-sh-col);
 }
 
 .tasks-swiper .task-slide .link {
@@ -187,17 +188,36 @@
     margin-left: 20px;
 }
 
+
 .tasks-swiper .swiper-button-next,
 .tasks-swiper .swiper-button-prev {
-    color: var(--main-col);
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    background-color: var(--dark-blue-col);
+    /* border: 1px solid var(--white-col); */
+    box-shadow: 0 0 2px var(--white-sh-col);
 }
 
-.tasks-swiper .swiper-pagination-bullet {
-    background-color: var(--hover-col);
+.tasks-swiper .swiper-button-next:hover,
+.tasks-swiper .swiper-button-prev:hover {
+    border-color: var(--light-blue-col);
 }
+
+.tasks-swiper .swiper-button-next::after,
+.tasks-swiper .swiper-button-prev::after {
+    font-size: 18px;
+    color: var(--white-col);
+}
+
+.tasks-swiper .swiper-button-next:hover::after,
+.tasks-swiper .swiper-button-prev:hover::after {
+    color: var(--light-blue-col);
+}
+
 
 .tasks-swiper .swiper-pagination-bullet-active {
-    background-color: var(--main-col);
+    background-color: var(--dark-blue-col);
 }
 
 @media (max-width:767px) {

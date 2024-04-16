@@ -116,7 +116,10 @@
     /* border: 1px solid var(--dark-blue-col); */
     border: none;
     box-shadow: 0 0 2px var(--dark-blue-col);
-    color: var(--main-txt-col);
+    font-size: 14px;
+    /* font-weight: 600; */
+    letter-spacing: 0.6px;
+    color: var(--main-text-col);
 }
 
 .sign-page main .container .sign-form form input:focus {
@@ -203,6 +206,7 @@
     text-transform: capitalize;
     display: flex;
     align-items: center;
+    color: var(--dark-col);
 }
 
 .sign-page main .container .sign-form form .terms-box .icon {
@@ -223,6 +227,7 @@
     text-align: center;
     text-transform: capitalize;
     font-size: 13px;
+    color: var(--main-text-col);
 }
 
 .sign-page main .container .sign-form form .log-box .change-path {

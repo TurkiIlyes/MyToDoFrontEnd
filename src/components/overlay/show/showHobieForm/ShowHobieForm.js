@@ -25,7 +25,11 @@ const ShowHobieForm = () => {
       {hobieData.title && (
         <>
           <OverlayCloseBtn />
-          <h1>{hobieData.title}</h1>
+          <h1>
+            {hobieData.title.length < 12
+              ? hobieData.title
+              : hobieData.title.slice(0, 12) + "..."}
+          </h1>
 
           <div className="show-time-box">
             <span className="sep">from</span>

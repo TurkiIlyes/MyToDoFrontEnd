@@ -30,7 +30,11 @@ const ShowTaskForm = () => {
       {taskData.title && (
         <>
           <OverlayCloseBtn />
-          <h1>{taskData.title}</h1>
+          <h1>
+            {taskData.title.length < 12
+              ? taskData.title
+              : taskData.title.slice(0, 12) + "..."}
+          </h1>
           {taskData.details ? (
             <span className="details">{taskData.details}</span>
           ) : null}

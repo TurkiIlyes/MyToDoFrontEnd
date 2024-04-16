@@ -57,7 +57,11 @@ const Slide = ({ task, showOverlay, setShowOverlay }) => {
           )}
         </div>
         <div className="task-data">
-          <span className="task-title">{task.title}</span>
+          <span className="task-title">
+            {task.title.length < 10
+              ? task.title
+              : task.title.slice(0, 10) + "..."}
+          </span>
         </div>
       </Link>
     </>

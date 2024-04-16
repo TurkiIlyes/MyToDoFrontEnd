@@ -56,7 +56,9 @@ const Slide = ({ data, showOverlay, setShowOverlay }) => {
 
         <div className="text-box">
           <span className="title">
-            {data.title.length <= 12 ? data.title : data.title.slice(12)}
+            {data.title.length < 8
+              ? data.title
+              : data.title.slice(0, 8) + "..."}
           </span>
           <span className="time">
             {data.startTime} - {data.endTime}
