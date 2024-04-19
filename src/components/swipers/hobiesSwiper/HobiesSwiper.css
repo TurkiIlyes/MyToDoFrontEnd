@@ -2,9 +2,9 @@
     width: 100%;
     height: 250px;
     z-index: 2;
-    background-color: var(--focus-col);
+    background-color: var(--light-th-hover-col, var(--focus-col));
     border-radius: 7px;
-
+    box-shadow: 0 0 2px var(--light-box-sh-col, transparent);
 }
 
 @media (max-width:767px) {
@@ -21,7 +21,7 @@
     background-color: var(--white-col);
     border-radius: 10px;
     margin: 17px 6px;
-    box-shadow: 0 0 5px var(--box-sh-col);
+    box-shadow: 0 0 5px var(--light-box-sh-col);
 
 }
 
@@ -87,7 +87,7 @@
 .hobies-swiper .Hobie-slide .text-box .time {
     font-size: 14px;
     font-weight: 700;
-    opacity: 0.6;
+    opacity: 0.5;
     letter-spacing: 1.4px;
     color: var(--dark-grey);
 }
@@ -121,7 +121,7 @@
     top: 140%;
     width: 110px;
     padding: 5px;
-    background-color: var(--red-col);
+    background-color: var(--light-col);
     border-radius: 7px;
     border-width: 0 2px 2px;
     outline-width: 0 2px 2px;
@@ -146,7 +146,7 @@
     right: 4px;
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent var(--red-col) transparent;
+    border-color: transparent transparent var(--light-col) transparent;
 }
 
 .hobies-swiper .Hobie-slide .hobie-menu .btn {
@@ -158,8 +158,8 @@
     margin: 2px 0;
     background-color: var(--white-col);
     color: var(--dark-blue-col);
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: capitalize;
 

@@ -3,7 +3,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 9999;
-    box-shadow: 0 0 4px var(--box-sh-col);
+    box-shadow: 0 0 3px var(--light-box-sh-col, transparent);
 }
 
 header .container {
@@ -105,18 +105,18 @@ header .container nav ul li>a {
     letter-spacing: 0.7px;
     color: var(--white-col);
     background-color: var(--dark-blue-col);
-    box-shadow: 0 0 2px var(--box-sh-col);
+    box-shadow: 0 0 2px var(--light-box-sh-col);
 
 }
 
 header .container nav ul li>a.active {
     color: var(--white-col);
     background-color: var(--light-blue-col);
-    box-shadow: 0 0 2px var(--box-sh-col);
+    box-shadow: 0 0 2px var(--light-box-sh-col);
 }
 
 header .container nav ul li>a.log-out {
     color: var(--white-col);
     background-color: var(--red-col);
-    box-shadow: 0 0 2px var(--red-col);
+    box-shadow: 0 0 2px var(--light-box-sh-col);
 }

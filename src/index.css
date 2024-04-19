@@ -57,7 +57,9 @@ body.light {
     --header-col: #FFFFFF;
     --secondary-col: transparent;
     --primary-col: #FFFFFF;
-    --box-sh-col: #0061703e;
+    --dark-box-sh-col: #006270;
+    --light-blue-box-sh-col: #00a693;
+    --light-box-sh-col: #c0c0c0c5;
     --main-col: #009394;
     --light-blue-col: #00E0C7;
     --dark-blue-col: #006270;
@@ -65,6 +67,10 @@ body.light {
     --sec-text-col: #757575;
     --main-text-col: #43434F;
     --calender-text-col: var(--main-text-col);
+    --light-th-light-blue-col: var(--light-blue-col);
+    --light-th-dark-blue-col: var(--dark-blue-col);
+    --light-th-sec-text-col: #757575;
+    --light-th-hover-col: #efeeeeb1;
     --blue-sh-col: var(--dark-blue-col);
     --white-sh-col: var(--white-col);
 
@@ -85,7 +91,7 @@ body.light {
 }
 
 body.dark {
-    --box-sh-col: transparent;
+    /* --box-sh-col: transparent; */
 
     --black-col: #000000;
     --blue-col: #4285F4;
