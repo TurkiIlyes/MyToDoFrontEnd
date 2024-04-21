@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleExclamation,
+  faEllipsis,
+} from "@fortawesome/free-solid-svg-icons";
 
 import logo from "../../../i2.png";
 
@@ -26,52 +29,57 @@ const SearchData = ({ searchData }) => {
   }, []);
   console.log(data);
   return (
-    <div className="search-data-box">
+    <>
       {data.results ? (
-        data.data.map((task, i) => {
-          return (
-            <div className="box" key={i}>
-              <button
-                className="menu-box"
-                onClick={() => setShowMenu((prev) => !prev)}
-              >
-                <FontAwesomeIcon icon={faEllipsis} className="icon" />
-                {showMenu && (
-                  <div className="task-menu">
-                    <Link to={`/home/updatetask/${task._id}`}>
-                      <button className="btn">update task</button>
-                    </Link>
-                    <Link to={`/home/deletetask/${task._id}`}>
-                      <button className="btn">delete task</button>
-                    </Link>
-                  </div>
-                )}
-              </button>
-
-              <Link to={`/home/showtask/${task._id}`} className="link">
-                <span className="task-status">{getStatus(task)}</span>
-                <div className="img-box">
-                  {task.image !== "null" ? (
-                    <img
-                      src={`${process.env.REACT_APP_API_URI}/task/${task.image}`}
-                      alt=""
-                      className="task-img"
-                    />
-                  ) : (
-                    ""
+        <div className="search-data-box">
+          {data.data.map((task, i) => {
+            return (
+              <div className="box" key={i}>
+                <button
+                  className="menu-box"
+                  onClick={() => setShowMenu((prev) => !prev)}
+                >
+                  <FontAwesomeIcon icon={faEllipsis} className="icon" />
+                  {showMenu && (
+                    <div className="task-menu">
+                      <Link to={`/home/updatetask/${task._id}`}>
+                        <button className="btn">update task</button>
+                      </Link>
+                      <Link to={`/home/deletetask/${task._id}`}>
+                        <button className="btn">delete task</button>
+                      </Link>
+                    </div>
                   )}
-                </div>
-                <div className="task-data">
-                  <span className="task-title">{task.title}</span>
-                </div>
-              </Link>
-            </div>
-          );
-        })
+                </button>
+
+                <Link to={`/home/showtask/${task._id}`} className="link">
+                  <span className="task-status">{getStatus(task)}</span>
+                  <div className="img-box">
+                    {task.image !== "null" ? (
+                      <img
+                        src={`${process.env.REACT_APP_API_URI}/task/${task.image}`}
+                        alt=""
+                        className="task-img"
+                      />
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                  <div className="task-data">
+                    <span className="task-title">{task.title}</span>
+                  </div>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
       ) : (
-        <h1 style={{ color: "white", fontSize: "18px" }}>No data found</h1>
+        <div className="search-no-data-box">
+          <span>no data found</span>
+          <FontAwesomeIcon icon={faCircleExclamation} className="icon" />
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

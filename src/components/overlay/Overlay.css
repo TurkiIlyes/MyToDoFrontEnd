@@ -34,6 +34,7 @@
     padding: 25px;
     padding-bottom: 15px;
     background-color: var(--primary-col);
+    box-shadow: 0 0 2px var(--light-th-light-blue-col, transparent);
 }
 
 @media (max-width:767px) {
@@ -71,14 +72,14 @@
 .overlay form h1 {
     font-size: 38px;
     font-weight: 500;
-    color: var(--light-col);
+    color: var(--light-th-med-blue-col, var(--light-col));
     text-align: center;
     text-transform: capitalize;
     margin-bottom: 15px;
 }
 
 .overlay form .sub-title {
-    color: var(--white-col);
+    color: var(--light-th-sec-text-col, var(--white-col));
     text-align: center;
     font-size: 14px;
     letter-spacing: 0.6px;
@@ -101,11 +102,13 @@
     border-radius: 5px;
     outline: none;
     border: none;
-    color: var(--white-col);
+    color: var(--light-th-sec-text-col, var(--white-col));
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1.6px;
-    background-color: var(--grey-col);
+    background-color: var(--light-in-bg, var(--grey-col));
+
+    box-shadow: 0 0 2px var(--light-th-dark-blue-col, transparent);
 
 }
 
@@ -126,15 +129,17 @@
     font-weight: 700;
     line-height: 1.6;
     border: none;
-    color: var(--white-col);
-    background-color: var(--grey-col);
+    color: var(--light-th-sec-text-col, var(--white-col));
+    background-color: var(--light-in-bg, var(--grey-col));
+
+    box-shadow: 0 0 2px var(--light-th-dark-blue-col, transparent);
 }
 
 .overlay form input:not([type="file"])::placeholder,
 .overlay form input[type="datetime-local"],
 .overlay form input[type="time"],
 .overlay form .task-details::placeholder {
-    color: var(--white-col);
+    color: var(--light-th-sec-text-col, var(--white-col));
     font-size: 14px;
     letter-spacing: 3px;
 }
@@ -152,10 +157,10 @@
 }
 
 .overlay form input:focus,
-
 .overlay form .task-details:focus {
     border-color: var(--blue-col);
-    background-color: var(--white-blue-col);
+    background-color: var(--input-focus-col);
+    /* background-color: #e8f0fe; */
     color: var(--grey-col);
 }
 
@@ -170,7 +175,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border: 3px dashed var(--grey-col);
+    border: 3px dashed var(--light-th-med-blue-col, var(--grey-col));
 }
 
 .overlay form .image-box input[type="file"] {
@@ -186,13 +191,13 @@
 .overlay form .image-box .icon {
     margin-bottom: 5px;
     font-size: 26px;
-    color: var(--grey-col);
+    color: var(--light-th-med-blue-col, var(--grey-col));
 
 }
 
 .overlay form .image-box .image-txt {
     text-transform: capitalize;
-    color: var(--grey-col);
+    color: var(--light-th-med-blue-col, var(--grey-col));
     font-size: 16px;
     font-weight: 500;
 }
@@ -207,14 +212,14 @@
 .overlay form .send-email-box .send-email-txt {
     font-size: 18px;
     text-transform: capitalize;
-    color: var(--white-col);
-    font-weight: 700;
+    color: var(--light-th-dark-blue-col, var(--white-col));
+    font-weight: 500;
 }
 
 .overlay form .send-email-box .icon {
     margin-left: 15px;
     font-size: 26px;
-    color: var(--light-col);
+    color: var(--light-th-light-blue-col, var(--light-col));
     border-radius: 50%;
     cursor: pointer;
 }
@@ -231,7 +236,7 @@
     font-size: 22px;
     letter-spacing: 1.2px;
     text-transform: capitalize;
-    background-color: var(--light-col);
+    background-color: var(--light-th-med-blue-col, var(--light-col));
     margin-top: 15px;
 }
 
@@ -263,13 +268,13 @@
 }
 
 .overlay form .form-btns .btn:first-of-type {
-    background-color: var(--light-col);
+    background-color: var(--light-th-med-blue-col, var(--light-col));
     color: var(--white-col);
 }
 
 .overlay form .form-btns .btn:last-of-type {
     background-color: transparent;
-    color: var(--light-col);
+    color: var(--light-th-med-blue-col, var(--light-col));
 }
 
 
@@ -446,7 +451,8 @@
 .overlay form .select-status-box .status {
     padding: 8px 10px;
     border-radius: 10px;
-    background-color: var(--secondary-col);
+    /* background-color: var(--secondary-col); */
+    background-color: var(--light-th-dark-blue-col, var(--secondary-col));
     color: var(--white-col);
     margin: 0 5px;
     font-size: 14px;
@@ -460,7 +466,8 @@
 }
 
 .overlay form .select-status-box .status.selected-status {
-    background-color: var(--light-col);
+    /* background-color: var(--light-col); */
+    background-color: var(--light-th-light-blue-col, var(--light-col));
 }
 
 @media (max-width: 575px) {

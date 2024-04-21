@@ -14,12 +14,18 @@
     /* color: var(--light-th-light-blue-col, var(--calender-text-col)) !important; */
 }
 
-.css-1bzq5ag,
-.css-sldnni,
+.css-1bzq5ag {
+    color: var(--light-th-dark-blue-col, var(--calender-text-col)) !important;
+}
+
+.css-sldnni {
+    color: var(--light-th-dark-blue-col, var(--calender-text-col)) !important;
+}
+
 .css-1cw4hi4,
 .css-10qkmc3,
 .css-6exafu {
-    color: var(--calender-text-col) !important;
+    color: var(--light-th-light-blue-col, var(--calender-text-col)) !important;
 }
 
 .css-jgls56-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected) {
@@ -40,11 +46,14 @@
 
 /* Dev Mode */
 
-.css-cyfsxc-MuiPickersCalendarHeader-labelContainer,
+.css-cyfsxc-MuiPickersCalendarHeader-labelContainer {
+    color: var(--light-th-med-blue-col, var(--calender-text-col)) !important;
+}
+
 .css-12mkn7b-MuiButtonBase-root-MuiIconButton-root-MuiPickersCalendarHeader-switchViewButton,
 .css-kg9q0s-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button,
 .css-1nkg345-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button {
-    color: var(--light-th-dark-blue-col, var(--calender-text-col)) !important;
+    color: var(--light-th-light-blue-col, var(--calender-text-col)) !important;
 }
 
 .css-rhmlg1-MuiTypography-root-MuiDayCalendar-weekDayLabel,
@@ -54,7 +63,7 @@
 
 .css-jgls56-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
 .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
-    background-color: var(--light-th-dark-blue-col, var(--grey-col)) !important;
+    background-color: var(--light-th-light-blue-col, var(--grey-col)) !important;
 }
 
 .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {

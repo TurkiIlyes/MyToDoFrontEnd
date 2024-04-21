@@ -32,6 +32,7 @@ import DeleteHobieForm from "./components/overlay/delete/deleteHobieForm/DeleteH
 import UpdateTaskForm from "./components/overlay/update/updateTaskForm/UpdateTaskForm";
 import ShowTaskForm from "./components/overlay/show/showTaskForm/ShowTaskForm";
 import DeleteTaskForm from "./components/overlay/delete/deleteTaskForm/DeleteTaskForm";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -77,6 +78,7 @@ function App() {
             </Route>
           </Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

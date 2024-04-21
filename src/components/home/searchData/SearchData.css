@@ -166,3 +166,31 @@
     text-transform: capitalize;
     margin-left: 20px;
 }
+
+
+.search-no-data-box {
+    margin-top: 20px;
+    width: 100%;
+    height: 120px;
+    border-radius: 7px;
+    background-color: var(--light-th-hover-col, var(--focus-col));
+    box-shadow: 0 0 2px var(--light-box-sh-col, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-no-data-box span {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--light-th-dark-blue-col, var(--white-col));
+    opacity: 0.6;
+}
+
+.search-no-data-box .icon {
+    font-size: 18px;
+    margin-left: 5px;
+    color: var(--light-th-dark-blue-col, var(--white-col));
+    opacity: 0.6;
+}

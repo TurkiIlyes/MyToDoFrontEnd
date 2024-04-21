@@ -4,6 +4,7 @@
     width: 100%;
     min-height: 800px;
     padding: 25px 10px;
+
 }
 
 @media (min-width:768px) {
@@ -209,13 +210,13 @@
     font-size: 18px;
     font-weight: 500;
     text-transform: capitalize;
-    color: var(--light-th-sec-text-col, var(--white-col));
+    color: var(--light-th-dark-blue-col, var(--white-col));
     opacity: 0.6;
 }
 
 .main-home .no-data-box .icon {
     font-size: 18px;
     margin-left: 5px;
-    color: var(--white-col);
+    color: var(--light-th-dark-blue-col, var(--white-col));
     opacity: 0.6;
 }
