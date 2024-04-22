@@ -25,14 +25,14 @@ const SignInForm = () => {
 
   return (
     <form>
-      <h1>Create an account</h1>
+      <h1>create an account</h1>
       <span className="sub-title">
-        its esay! just take a minute and provide the details
+        it's easy! just take a minute and provide your details
       </span>
       <SignWith />
       <input
         type="text"
-        placeholder="Email Addresse*"
+        placeholder="Email Address*"
         value={email}
         onChange={(e) => checkEmail(e, setEmail, setFormErrors)}
       />
@@ -50,7 +50,7 @@ const SignInForm = () => {
       )}
 
       <Link to="/forgetpassword" className="forget-password-btn">
-        forget password?
+        forget your password?
       </Link>
       {formErrors.access && (
         <span className="error-message">{formErrors.access}</span>
@@ -76,9 +76,9 @@ const SignInForm = () => {
         sign in
       </Link>
       <div className="log-box">
-        <span>dont have an account? </span>
+        <span>don't have an account? </span>
         <Link to="/signup" className="change-path">
-          signup
+          sign up
         </Link>
       </div>
     </form>

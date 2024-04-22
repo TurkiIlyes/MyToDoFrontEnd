@@ -34,15 +34,15 @@ const MainData = () => {
   return (
     <>
       <div className="today-activities">
-        <span className="section-title">today activities</span>
+        <span className="section-title">today's activities</span>
         <div className="section-box">
           <span className="section-desc">
-            Mange your habits, reminders, events, activites...
+            Manage your habits, reminders, events, activities...
           </span>
           <Link to="/home/createtask">
             <div className="btn">
               <FontAwesomeIcon icon={faPlus} className="icon" />
-              <span>new task</span>
+              <span>add task</span>
             </div>
           </Link>
         </div>
@@ -60,7 +60,7 @@ const MainData = () => {
       {!tasksUpdateState ? (
         <>
           <SelectedDateSwiper />
-          <DaySwiper lte={2} gte={1} name="tomorow" />
+          <DaySwiper lte={2} gte={1} name="tomorrow" />
           <DaySwiper lte={7} gte={0} name="current week" />
           <DaySwiper lte={14} gte={7} name="next week" />
         </>

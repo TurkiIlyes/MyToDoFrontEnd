@@ -5,6 +5,7 @@ import { Outlet } from "react-router";
 import "./Home.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getHobies } from "../../redux/slice/AuthSlice";
+import Footer from "../../components/footer/Footer";
 const Home = () => {
   // const dispatch = useDispatch();
   // const token = useSelector((state) => state.auth.user.token);
@@ -14,11 +15,14 @@ const Home = () => {
   // });
 
   return (
-    <div className="home-page">
-      <MainHome />
-      <RightSideBar />
-      <Outlet />
-    </div>
+    <>
+      <div className="home-page">
+        <MainHome />
+        <RightSideBar />
+        <Outlet />
+      </div>
+      <Footer />
+    </>
   );
 };
 

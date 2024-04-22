@@ -51,11 +51,13 @@
     top: 15px;
     border-radius: 50%;
     box-shadow: 0 0 1px var(--light-box-sh-col);
+    cursor: pointer;
 }
 
 .overlay form .close-box .icon {
     color: var(--red-col);
     font-size: 30px;
+    cursor: pointer;
 }
 
 .overlay form>* {
@@ -79,7 +81,7 @@
     text-align: center;
     text-transform: capitalize;
     margin-bottom: 15px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .overlay form .sub-title {

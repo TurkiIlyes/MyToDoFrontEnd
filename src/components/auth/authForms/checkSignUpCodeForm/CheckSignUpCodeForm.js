@@ -27,7 +27,7 @@ const CheckSignUpCodeForm = () => {
     <form>
       <h1>Check verification code</h1>
       <span className="sub-title">
-        its esay! just take a minute and provide the details
+        it's easy! just take a minute and provide the details
       </span>
       <SignWith />
 
@@ -65,9 +65,9 @@ const CheckSignUpCodeForm = () => {
         Check code
       </Link>
       <div className="log-box">
-        <span>dont have an account? </span>
+        <span>don't have an account? </span>
         <Link to="/signup" className="change-path">
-          signup
+          sign up
         </Link>
       </div>
     </form>

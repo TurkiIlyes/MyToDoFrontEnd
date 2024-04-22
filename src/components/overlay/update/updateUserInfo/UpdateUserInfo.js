@@ -42,7 +42,7 @@ const UpdateUserInfo = () => {
     <form>
       <OverlayCloseBtn />
       <h1>update info</h1>
-      <label htmlFor="full-name">full name :</label>
+      <label htmlFor="email">email :</label>
       <input
         type="text"
         placeholder="Email Addresse*"
@@ -50,7 +50,7 @@ const UpdateUserInfo = () => {
         id="email"
         readOnly
       />
-      <label htmlFor="email">email :</label>
+      <label htmlFor="full-name">full name :</label>
       <input
         type="text"
         placeholder="Full Name*"

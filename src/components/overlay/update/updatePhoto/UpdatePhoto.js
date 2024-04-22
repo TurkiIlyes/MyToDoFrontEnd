@@ -48,7 +48,7 @@ const UpdatePhoto = () => {
         <FontAwesomeIcon icon={faCloudArrowUp} className="icon" />
         <span className="image-txt">
           {!image
-            ? "no file choosen"
+            ? "no file chosen"
             : image.name.length >= 10
             ? "..." + image.name.slice(-10)
             : image.name}

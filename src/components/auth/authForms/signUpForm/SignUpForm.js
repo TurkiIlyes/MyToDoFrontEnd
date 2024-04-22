@@ -35,9 +35,9 @@ const SignUpForm = () => {
 
   return (
     <form>
-      <h1>Create an account</h1>
+      <h1>create an account</h1>
       <span className="sub-title">
-        its esay! just take a minute and provide the details
+        it's easy! just take a minute and provide your details
       </span>
       <SignWith />
       <input
@@ -51,7 +51,7 @@ const SignUpForm = () => {
       )}
       <input
         type="text"
-        placeholder="Email Addresse*"
+        placeholder="Email Address*"
         value={email}
         onChange={(e) => checkEmail(e, setEmail, setFormErrors)}
       />
@@ -83,7 +83,7 @@ const SignUpForm = () => {
         <button className="image-btn">choose image</button>
         <span className="image-txt">
           {!image
-            ? "no file choosen"
+            ? "no file chosen"
             : image.name.length >= 10
             ? "..." + image.name.slice(-10)
             : image.name}

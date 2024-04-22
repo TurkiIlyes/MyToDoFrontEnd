@@ -55,10 +55,10 @@ const CreateHobieForm = () => {
   return (
     <form>
       <OverlayCloseBtn />
-      <h1>add hobie</h1>
+      <h1>add Hobby</h1>
       <span className="sub-title">tackle your goals in daily doses</span>
 
-      <label htmlFor="hobie-title">hobie title :</label>
+      <label htmlFor="hobie-title">hobby title :</label>
       <input
         type="text"
         placeholder="Title*"
@@ -94,7 +94,7 @@ const CreateHobieForm = () => {
         <span className="error-message">{formErrors.endTime}</span>
       )}
 
-      <label htmlFor="hobie-img">hobie image :</label>
+      <label htmlFor="hobie-img">hobby image :</label>
       <div className="image-box">
         <input
           type="file"
@@ -104,7 +104,7 @@ const CreateHobieForm = () => {
         <FontAwesomeIcon icon={faCloudArrowUp} className="icon" />
         <span className="image-txt">
           {!image
-            ? "no file choosen"
+            ? "no file chosen"
             : image.name.length >= 10
             ? "..." + image.name.slice(-10)
             : image.name}
@@ -115,7 +115,7 @@ const CreateHobieForm = () => {
       )}
       <div className="form-btns">
         <button className="btn" onClick={handleCreate}>
-          save habie
+          save hobby
         </button>
         <button className="btn" onClick={handleCreateMore}>
           <FontAwesomeIcon icon={faPlus} className="icon" />

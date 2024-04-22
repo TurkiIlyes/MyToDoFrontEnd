@@ -37,7 +37,7 @@ export const checkStartDate = (
     ...prev,
     startDate:
       selectedStatus === "To Do" && new Date(newDate).getTime() < Date.now()
-        ? "to do date have to be in the future"
+        ? "The selected date must be in the future"
         : "",
   }));
 
@@ -57,7 +57,7 @@ export const checkUpdateTaskStatus = (
     ...prev,
     updateTaskStatus:
       e === "To Do" && new Date(startDate).getTime() < Date.now()
-        ? "can't put to do with prev date"
+        ? "Tasks must have future dates for completion."
         : "",
   }));
 };

@@ -46,10 +46,14 @@
 
 
 .sign-page main .container .sign-form form h1 {
-    font-size: 38px;
+    font-size: 36px;
     font-weight: 500;
     color: var(--dark-blue-col);
     text-align: center;
+}
+
+.sign-page main .container .sign-form form h1::first-letter {
+    text-transform: uppercase;
 }
 
 .sign-page main .container .sign-form form .sub-title {
@@ -58,6 +62,10 @@
     font-size: 14px;
     letter-spacing: 0.6px;
     font-weight: 500;
+}
+
+.sign-page main .container .sign-form form .sub-title::first-letter {
+    text-transform: uppercase;
 }
 
 .sign-page main .container .sign-form form .sep-box {

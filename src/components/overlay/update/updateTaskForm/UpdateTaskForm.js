@@ -75,11 +75,11 @@ const UpdateTaskForm = () => {
         <span className="error-message">{formErrors.title}</span>
       )}
 
-      <label htmlFor="task-details">start details :</label>
+      <label htmlFor="task-details">task details :</label>
       <textarea
         maxLength={256}
         className="task-details"
-        placeholder="Task Details"
+        placeholder="Task Description"
         id="task-details"
         value={details}
         onChange={(e) => checkDetails(e, setDetails, setFormErrors)}
@@ -144,7 +144,7 @@ const UpdateTaskForm = () => {
         <FontAwesomeIcon icon={faCloudArrowUp} className="icon" />
         <span className="image-txt">
           {!image
-            ? "no file choosen"
+            ? "no file chosen"
             : image.name.length >= 10
             ? "..." + image.name.slice(-10)
             : image.name}

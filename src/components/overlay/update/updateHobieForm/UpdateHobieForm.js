@@ -61,9 +61,9 @@ const UpdateHobieForm = () => {
   return (
     <form>
       <OverlayCloseBtn />
-      <h1>update hobie</h1>
+      <h1>update Hobby</h1>
       <span className="sub-title">tackle your goals in daily doses</span>
-      <label htmlFor="hobie-title">hobie title :</label>
+      <label htmlFor="hobie-title">hobby title :</label>
 
       <input
         type="text"
@@ -100,7 +100,7 @@ const UpdateHobieForm = () => {
         <span className="error-message">{formErrors.endTime}</span>
       )}
 
-      <label htmlFor="hobie-img">hobie image :</label>
+      <label htmlFor="hobie-img">hobby image :</label>
       <div className="image-box">
         <input
           type="file"

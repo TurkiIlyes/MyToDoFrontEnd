@@ -31,7 +31,7 @@ const ChangePasswordForm = () => {
     <form>
       <h1>Change password</h1>
       <span className="sub-title">
-        its esay! just take a minute and provide the details
+        it's easy! just take a minute and provide your details
       </span>
       <SignWith />
 
@@ -78,9 +78,9 @@ const ChangePasswordForm = () => {
         Change
       </Link>
       <div className="log-box">
-        <span>dont have an account? </span>
+        <span>don't have an account? </span>
         <Link to="/signup" className="change-path">
-          signup
+          sign up
         </Link>
       </div>
     </form>

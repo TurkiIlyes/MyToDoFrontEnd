@@ -28,9 +28,10 @@ const SearchData = ({ searchData }) => {
     fetchTasks();
   }, []);
   console.log(data);
+  console.log("no data test !!!", data.results);
   return (
     <>
-      {data.results ? (
+      {data.results !== 0 && data.results && (
         <div className="search-data-box">
           {data.data.map((task, i) => {
             return (
@@ -73,7 +74,8 @@ const SearchData = ({ searchData }) => {
             );
           })}
         </div>
-      ) : (
+      )}
+      {data.results === 0 && (
         <div className="search-no-data-box">
           <span>no data found</span>
           <FontAwesomeIcon icon={faCircleExclamation} className="icon" />
