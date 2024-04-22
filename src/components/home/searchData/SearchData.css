@@ -16,6 +16,7 @@
     border-radius: 10px;
     margin: 23px 10px;
     position: relative;
+    box-shadow: 0 0 5px var(--light-box-sh-col);
 }
 
 .search-data-box .box .link {
@@ -30,11 +31,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--dark-blue-col);
+    background-color: var(--light-th-med-blue-col, var(--dark-blue-col));
     width: 100%;
     height: 67%;
     border-bottom-left-radius: 40px;
-
+    box-shadow: 0 0 5px var(--light-th-sec-text-col);
+    z-index: 1;
 }
 
 .search-data-box .box .img-box::after {
@@ -44,7 +46,7 @@
     bottom: -30px;
     width: 30px;
     height: 30px;
-    background-color: var(--dark-blue-col);
+    background-color: var(--light-th-med-blue-col, var(--dark-blue-col));
     z-index: 1;
 }
 
@@ -63,7 +65,8 @@
     font-weight: 500;
     background-color: var(--red-col);
     color: var(--white-col);
-    z-index: 1;
+    box-shadow: 0 0 4px var(--light-th-sec-text-col);
+    z-index: 2;
 }
 
 .search-data-box .box .menu-box {
@@ -73,6 +76,7 @@
     width: 30px;
     height: 30px;
     background-color: var(--white-col);
+    box-shadow: 0 0 4px var(--light-th-sec-text-col);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,7 +87,7 @@
 }
 
 .search-data-box .box .menu-box .icon {
-    color: var(--dark-blue-col);
+    color: var(--med-blue-col);
     font-size: 20px;
 
 }
@@ -97,7 +101,8 @@
     top: 140%;
     width: 140px;
     padding: 5px;
-    background-color: var(--red-col);
+    background-color: var(--light-th-hover-col, var(--secondary-col));
+    box-shadow: 0 0 5px var(--light-th-sec-text-col);
     border-radius: 7px;
     border-width: 0 2px 2px;
     outline-width: 0 2px 2px;
@@ -111,7 +116,7 @@
     right: 4px;
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent var(--red-col) transparent;
+    border-color: transparent transparent var(--light-th-hover-col, var(--secondary-col)) transparent;
 }
 
 .search-data-box .box .task-menu .btn {
@@ -121,8 +126,9 @@
     border: none;
     border-radius: 5px;
     margin: 2px 0;
-    background-color: var(--white-col);
-    color: var(--dark-blue-col);
+    background-color: var(--light-th-dark-blue-col, var(--dark-blue-col));
+    color: var(--white-col);
+    box-shadow: 0 0 4px var(--light-th-sec-text-col);
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -160,7 +166,7 @@
 }
 
 .search-data-box .box .task-data .task-title {
-    color: var(--dark-blue-col);
+    color: var(--med-blue-col);
     font-size: 22px;
     font-weight: 700;
     text-transform: capitalize;

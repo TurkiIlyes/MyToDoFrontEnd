@@ -25,9 +25,13 @@
     color: var(--sec-text-col, var(--calender-text-col)) !important;
 }
 
+.css-1v994a0 {
+    color: var(--light-th-med-blue-col, var(--white-col)) !important;
+
+}
+
 .css-sldnni,
-.css-1cw4hi4,
-.css-10qkmc3 {
+.css-1cw4hi4 {
     color: var(--light-th-light-blue-col, var(--calender-text-col)) !important;
 }
 
