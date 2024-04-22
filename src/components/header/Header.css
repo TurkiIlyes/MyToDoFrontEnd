@@ -3,7 +3,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 9999;
-    box-shadow: 0 0 3px var(--light-box-sh-col, #1b2936);
+    box-shadow: 0 0 4px var(--header-hover-col);
 }
 
 header .container {
@@ -11,7 +11,8 @@ header .container {
 }
 
 header .container>.logo {
-    color: var(--main-col);
+    font-family: "Leckerli One", cursive;
+    color: var(--light-blue-col);
     height: 65px;
     font-size: 36px;
     display: flex;
@@ -93,19 +94,19 @@ header .container nav ul li>a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     text-transform: capitalize;
     margin: 0 5px;
-    width: 96px;
-    height: 38px;
+    width: 100px;
+    height: 40px;
     border-radius: 10px;
     outline: none;
     border: none;
     letter-spacing: 0.7px;
     color: var(--white-col);
     background-color: var(--dark-blue-col);
-    box-shadow: 0 0 2px var(--light-box-sh-col);
+    box-shadow: 0 0 3px var(--light-th-sec-text-col);
 
 }
 

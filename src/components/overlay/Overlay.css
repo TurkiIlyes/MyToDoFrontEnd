@@ -34,7 +34,8 @@
     padding: 25px;
     padding-bottom: 15px;
     background-color: var(--primary-col);
-    box-shadow: 0 0 2px var(--light-th-light-blue-col, transparent);
+    /* box-shadow: 0 0 2px var(--light-th-light-blue-col, transparent); */
+    box-shadow: 0 0 4px var(--light-th-sec-text-col);
 }
 
 @media (max-width:767px) {
@@ -48,6 +49,8 @@
     position: absolute;
     right: 15px;
     top: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px var(--light-box-sh-col);
 }
 
 .overlay form .close-box .icon {
@@ -76,6 +79,7 @@
     text-align: center;
     text-transform: capitalize;
     margin-bottom: 15px;
+    opacity: 0.8;
 }
 
 .overlay form .sub-title {
@@ -86,6 +90,7 @@
     line-height: 1.6;
     font-weight: 600;
     text-transform: capitalize;
+    opacity: 0.7;
 }
 
 .overlay form label {
@@ -94,6 +99,7 @@
     font-size: 16px;
     color: var(--main-col);
     font-weight: 700;
+    opacity: 0.7;
 }
 
 .overlay form input:not([type="file"]) {
@@ -113,7 +119,7 @@
 }
 
 .overlay form input:read-only {
-    background-color: var(--secondary-col);
+    background-color: var(--light-sh-in-bg-col, var(--secondary-col));
 }
 
 .overlay form .task-details {
@@ -161,7 +167,7 @@
     border-color: var(--blue-col);
     background-color: var(--input-focus-col);
     /* background-color: #e8f0fe; */
-    color: var(--grey-col);
+    /* color: var(--grey-col); */
 }
 
 .overlay form .image-box {
@@ -175,7 +181,9 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border: 3px dashed var(--light-th-med-blue-col, var(--grey-col));
+    /* border: 3px dashed var(--light-th-med-blue-col, var(--grey-col)); */
+    border: 3px dashed var(--grey-col);
+    opacity: 0.8;
 }
 
 .overlay form .image-box input[type="file"] {
@@ -191,15 +199,18 @@
 .overlay form .image-box .icon {
     margin-bottom: 5px;
     font-size: 26px;
-    color: var(--light-th-med-blue-col, var(--grey-col));
-
+    /* color: var(--light-th-med-blue-col, var(--grey-col)); */
+    color: var(--grey-col);
+    opacity: 0.8;
 }
 
 .overlay form .image-box .image-txt {
     text-transform: capitalize;
-    color: var(--light-th-med-blue-col, var(--grey-col));
+    /* color: var(--light-th-med-blue-col, var(--grey-col)); */
+    color: var(--grey-col);
     font-size: 16px;
     font-weight: 500;
+    opacity: 0.8;
 }
 
 .overlay form .send-email-box {
@@ -214,6 +225,7 @@
     text-transform: capitalize;
     color: var(--light-th-dark-blue-col, var(--white-col));
     font-weight: 500;
+    opacity: 0.8;
 }
 
 .overlay form .send-email-box .icon {
@@ -292,7 +304,9 @@
 
 .overlay form .wrn-message,
 .overlay form .form-btns .btn.wrn-message {
-    color: var(--red-col);
+    /* color: var(--red-col); */
+    color: var(--light-th-med-blue-col, var(--light-col));
+    opacity: 0.7;
 }
 
 
@@ -300,13 +314,13 @@
     padding: 10px 15px;
     border-radius: 7px;
     margin: 10px 0 20px;
-    color: var(--white-col);
+    color: var(--light-th-sec-text-col, var(--white-col));
     font-size: 14px;
     letter-spacing: 0.6px;
     line-height: 1.6;
     font-weight: 500;
     text-transform: capitalize;
-    background-color: var(--secondary-col);
+    background-color: var(--light-sh-in-bg-col, var(--secondary-col));
 }
 
 
@@ -322,8 +336,9 @@
     letter-spacing: 1.6px;
     text-transform: capitalize;
     font-size: 18px;
-    color: var(--white-col);
+    color: var(--light-th-med-blue-col, var(--white-col));
     font-weight: 700;
+    opacity: 0.7;
 }
 
 .overlay form .show-date-box .time {
@@ -332,8 +347,8 @@
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background-color: var(--secondary-col);
-    color: var(--white-col);
+    background-color: var(--light-sh-in-bg-col, var(--secondary-col));
+    color: var(--light-th-sec-text-col, var(--white-col));
     padding: 7px 15px;
     border-radius: 7px;
 }
@@ -357,7 +372,7 @@
     font-weight: 500;
     letter-spacing: 1.6px;
     text-transform: capitalize;
-    color: var(--light-blue-col);
+    color: var(--light-th-med-blue-col, var(--light-blue-col));
 
 }
 
@@ -366,8 +381,8 @@
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background-color: var(--secondary-col);
-    color: var(--white-col);
+    background-color: var(--light-sh-in-bg-col, var(--secondary-col));
+    color: var(--light-th-sec-text-col, var(--white-col));
     padding: 4px 10px;
     border-radius: 7px;
 }
@@ -415,8 +430,8 @@
     font-weight: 500;
     letter-spacing: 1.6px;
     text-transform: capitalize;
-    color: var(--white-col);
-
+    color: var(--light-th-med-blue-col, var(--white-col));
+    opacity: 0.7;
 }
 
 .overlay form .show-status-box .status {
@@ -424,8 +439,8 @@
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background-color: var(--secondary-col);
-    color: var(--white-col);
+    background-color: var(--light-sh-in-bg-col, var(--secondary-col));
+    color: var(--light-th-sec-text-col, var(--white-col));
     padding: 7px 12px;
     border-radius: 7px;
     margin-left: 10px;
@@ -446,6 +461,7 @@
     color: var(--main-col);
     font-size: 16px;
     font-weight: 700;
+    opacity: 0.7;
 }
 
 .overlay form .select-status-box .status {

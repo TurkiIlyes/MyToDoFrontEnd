@@ -1,5 +1,6 @@
 .sign-page main .container {
-    min-height: 600px;
+    /* min-height: 600px; */
+    min-height: 93vh;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100%;

@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: "Leckerli One", cursive; */
+    font-family: "Signika Negative", sans-serif;
 }
 
 body.light {
@@ -74,7 +88,7 @@ body.light {
     --light-th-hover-col: #efeeeeb1;
     --blue-sh-col: var(--dark-blue-col);
     --white-sh-col: var(--white-col);
-
+    --light-sh-in-bg-col: #e8f0fe;
     --light-in-bg: transparent;
     --input-focus-col: #e8f0fe;
 
@@ -87,7 +101,7 @@ body.light {
     --hover-col: #43434F;
     --white-col: #FFFFFF;
     --dark-grey: #2C3A47;
-
+    --header-hover-col: var(--light-box-sh-col);
     --med-blue-col: #009394;
 
     --overlay-col: rgba(120, 120, 120, 0.5);
@@ -114,7 +128,7 @@ body.dark {
     --med-blue-col: #009394;
     --light-blue-col: #00E0C7;
     --overlay-col: rgba(120, 120, 120, 0.5);
-
+    --header-hover-col: #1b2936;
     --main-text-col: var(--white-col);
     --sec-text-col: var(--white-col);
     --calender-text-col: var(--white-col);
@@ -130,14 +144,6 @@ body.dark {
     /* #2C3A47 #192734 #22303C #FFFFFF #8899A6 */
     /* #33E1ED */
     /* #006270 #009394 #00E0C7 */
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
 }
 
 body.active-overlay {

@@ -10,7 +10,7 @@
     z-index: 2;
     border-radius: 10px;
     /* box-shadow: 0 0 5px var(--dark-box-sh-col); */
-    box-shadow: 0 0 2px var(--light-box-sh-col, transparent);
+    box-shadow: 0 0 3px var(--light-box-sh-col);
     /* box-shadow: 0 0 3px var(--dark-blue-col); */
 }
 
@@ -61,7 +61,7 @@
     cursor: pointer;
     border: 3px dashed var(--grey-col);
     outline: 1px solid var(--white-col);
-    box-shadow: 0 0 5px var(--grey-col);
+    /* box-shadow: 0 0 5px var(--grey-col); */
     width: 100%;
     height: 55px;
     border-radius: 50%;
@@ -81,6 +81,7 @@
     text-transform: uppercase;
     color: var(--white-col);
     background-color: var(--light-th-med-blue-col, var(--grey-col));
+    box-shadow: 0 0 3px var(--light-th-sec-text-col);
 }
 
 .right-side-bar .profil-tools .user-tools-box .user-name {
@@ -122,6 +123,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 2;
+    cursor: pointer;
 }
 
 .right-side-bar .profil-tools .user-tools-box .profile-menu {
@@ -134,6 +136,7 @@
     z-index: 3;
     border: 3px solid var(--light-th-med-blue-col, var(--hover-col));
     background-color: var(--light-th-hover-col, var(--primary-col));
+    box-shadow: 0 0 2px var(--light-th-sec-text-col);
 }
 
 .right-side-bar .profil-tools .user-tools-box .profile-menu .btn {

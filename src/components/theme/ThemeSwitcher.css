@@ -24,4 +24,5 @@
      color: var(--white-col);
      /* box-shadow: 0 0 2px var(--primary-box-sh-col); */
      width: 100%;
+     box-shadow: 0 0 2px var(--light-th-sec-text-col);
  }
