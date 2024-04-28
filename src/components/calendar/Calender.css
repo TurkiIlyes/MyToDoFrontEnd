@@ -28,11 +28,12 @@
 
 .css-1v994a0 {
     color: var(--light-th-med-blue-col, var(--white-col)) !important;
-
+    font-family: "Signika Negative", sans-serif !important;
 }
 
 .css-sldnni,
 .css-1cw4hi4 {
+    font-family: "Signika Negative", sans-serif !important;
     color: var(--light-th-light-blue-col, var(--calender-text-col)) !important;
 }
 
@@ -45,6 +46,7 @@
 .css-6exafu.Mui-selected {
     background-color: var(--light-th-light-blue-col, var(--grey-col)) !important;
     box-shadow: 0 0 5px var(--light-th-sec-text-col);
+    color: white !important;
 }
 
 .css-15a0tn7:not(.Mui-selected) {
