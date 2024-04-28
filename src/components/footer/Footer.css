@@ -11,4 +11,6 @@
     font-weight: 300;
     color: var(--white-col);
     text-align: center;
+    /* color: var(--light-th-dark-blue-col, var(--white-col)); */
+    opacity: 0.9;
 }

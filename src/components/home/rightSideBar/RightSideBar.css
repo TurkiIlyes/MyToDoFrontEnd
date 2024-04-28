@@ -59,11 +59,12 @@
 
 .right-side-bar .profil-tools .user-tools-box img {
     cursor: pointer;
-    border: 3px dashed var(--grey-col);
-    outline: 1px solid var(--white-col);
+    border: 1px solid var(--light-th-med-blue-col, var(--grey-col));
+    /* outline: 1px solid var(--white-col); */
     /* box-shadow: 0 0 5px var(--grey-col); */
+    box-shadow: 0 0 3px var(--light-th-light-blue-col, var(--grey-col));
     width: 100%;
-    height: 55px;
+    height: 50px;
     border-radius: 50%;
 
 }

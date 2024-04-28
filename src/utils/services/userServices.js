@@ -24,12 +24,17 @@ export const deleteAccountService = async (userData, dispatch) => {
 export const updateImageService = async (userData, dispatch, Navigate) => {
   const formData = new FormData();
   formData.append("image", userData.image);
-  const data = await axios.put(`${process.env.REACT_APP_API_URI}/user/`, {
-    data: {
-      formData,
-    },
-    headers: { Authorization: userData.token },
-  });
+  console.log("check data :", userData);
+  const data = await axios.put(
+    `${process.env.REACT_APP_API_URI}/user/`,
+    formData,
+    {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: userData.token,
+      },
+    }
+  );
   if (data.status === 201) {
     dispatch(logIn(data.data));
     Navigate("/home");
