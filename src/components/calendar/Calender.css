@@ -1,8 +1,12 @@
 .right-side-bar .calender-box .calender {
     margin: auto;
-    color: var(--light-col);
     width: 320px;
     height: 500px;
+}
+
+.css-k3zp98 {
+    color: var(--light-col);
+    font-family: "Signika Negative", sans-serif !important;
 }
 
 .right-side-bar .calender-box .calender .calender-content {
